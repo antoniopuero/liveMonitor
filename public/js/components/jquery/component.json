@@ -1,0 +1,14 @@
+{
+  "name": "jquery",
+  "version": "1.6.2",
+  "main": "./jquery.js",
+  "dependencies": {},
+  "gitHead": "f33971d5371b8707ea4bedb6fb5c35e7cf34d87a",
+  "_id": "jquery@1.6.2",
+  "readme": "ERROR: No README.md file found!",
+  "description": "ERROR: No README.md file found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/components/jquery.git"
+  }
+}
