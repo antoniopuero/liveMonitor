@@ -15,9 +15,18 @@ require.config({
 		comet: 'components/cometd/cometd',
 		cometJquery: 'components/cometd/jquery.cometd',
 		cometController: 'components/cometd/cometd_controller',
-		marionette: 'components/marionette/backbone.marionette'
+		marionette: 'components/marionette/backbone.marionette',
+		/*app*/
+		app: 'app',
+		stage: 'app/stage'
 	},
 	shim: {
+		stage: {
+			deps: ['jquery']
+		},
+		app: {
+			deps: ['jquery']
+		},
 		backbone: {
 			deps: ['jquery', 'underscore'],
 			exports: 'Backbone'
