@@ -5,9 +5,11 @@
  * Time: 11:26
  * To change this template use File | Settings | File Templates.
  */
-define(['.'], function (Backbone) {
-	var event = Backbone.Model.extend({
-
+define(function () {
+	var event = Backbone.Collection.extend({
+		initialize: function () {
+			console.log('new event');
+		}
 	});
 	return event;
 });

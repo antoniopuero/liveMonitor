@@ -1,6 +1,6 @@
 
 
-define(function () {
+define(['stage'], function (LiveAPI) {
 	var cometController = {
 
 		init : function(){
@@ -95,23 +95,29 @@ define(function () {
 			var self = cometController,
 				data = message.data.response,
 				information = data.data;
-			for (var messageType in data.data); //for string value of type
+			for (var messageType in information) {
+				information = information[messageType];
+			}; //for string value of type
 
 			switch(messageType){
 				case 'event':
+					App.cond.event = LiveAPI.convertArrayIntoObject(information, 'event_num');
 					App.Vent.trigger('init:event', information);
 					self.theSubscribe('/data_o/dictionary/ua');
 					break;
 				case 'dictionary':
+					App.cond.dictionary = LiveAPI.convertArrayIntoObject(information, 'event_num');
 					App.Vent.trigger('init:dictionary', information);
 					self.theSubscribe('/data_o/event_stat/*');
 
 					break;
 				case 'event_stat':
+					App.cond.event_stat = LiveAPI.convertArrayIntoObject(information, 'event_num');
 					App.Vent.trigger('init:stat', information);
 					self.theSubscribe('/data_o/bettypes/*');
 					break;
 				case 'bettypes':
+					App.cond.bettypes = LiveAPI.convertArrayIntoObject(information, 'event_num');
 					App.Vent.trigger('init:bets', information);
 					break;
 			}

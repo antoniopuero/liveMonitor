@@ -22,7 +22,7 @@ require.config({
 	},
 	shim: {
 		stage: {
-			deps: ['jquery']
+			deps: ['jquery', 'underscore']
 		},
 		app: {
 			deps: ['jquery']
@@ -38,7 +38,7 @@ require.config({
 			deps: ['comet', 'jquery']
 		},
 		cometController: {
-			deps: ['jquery', 'comet', 'cometJquery']
+			deps: ['jquery', 'comet', 'cometJquery', 'stage']
 		}
 	},
 	urlArgs: "bust=" +  (new Date()).getTime()
@@ -46,32 +46,9 @@ require.config({
 });
 require(['app', 'backbone', 'cometController'], function (AppView, Backbone, transport) {
 	window.App = {
-		Vent: _.extend({}, Backbone.Events)
+		Vent: _.extend({}, Backbone.Events),
+		cond: {}
 	};
-	App.Vent.once('init:event', function (data) {
-		console.log(data);
-	});
-	App.Vent.once('init:bets', function (data) {
-		console.log(data);
-	});
-	App.Vent.once('init:stat', function (data) {
-		console.log(data);
-	});
-	App.Vent.once('init:dictionary', function (data) {
-		console.log(data);
-	});
-	App.Vent.once('update:event', function (data) {
-		console.log(data);
-	});
-	App.Vent.once('update:bets', function (data) {
-		console.log(data);
-	});
-	App.Vent.once('update:stat', function (data) {
-		console.log(data);
-	});
-	App.Vent.once('update:dictionary', function (data) {
-		console.log(data);
-	});
 	transport.init();
 	new AppView();
 });
