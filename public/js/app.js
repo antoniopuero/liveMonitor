@@ -11,10 +11,8 @@ define(['backbone', 'stage', 'collections/Events', 'views'], function (Backbone,
 		initialize: function () {
 
 			LiveAPI.setColumns(this.$el);
-			this.resize();
 			App.Vent.on('window:resize', this.resize, this);
 			window.addEventListener('resize', this.resize, false);
-			this.cloneEvents();
 
 			App.Vent.once('init:bets', function () {
 				App.cond.completeEvents = LiveAPI.checkCompleteEvents(App.cond);

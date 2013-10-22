@@ -6,14 +6,30 @@
  * To change this template use File | Settings | File Templates.
  */
 define(['templates'], function (templates) {
+
+
 	var EventView = Backbone.View.extend({
-		className: 'event',
+		className: 'event-wrapper',
 		template: templates.event,
 		render: function () {
 			this.$el.html(this.template(this.model.attributes));
 			return this;
+		},
+		renderHat: function () {
+
+		},
+		renderBettype: function () {
+
+		},
+		renderMarket: function () {
+
+		},
+		renderBet: function () {
+
 		}
 	});
+
+
 	var EventsView = Backbone.View.extend({
 		initialize: function () {
 

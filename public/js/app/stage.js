@@ -75,6 +75,7 @@ define(function () {
 			_.each(condObj.event, function (value, key) {
 				if (condObj.bettypes[key] && condObj.event_stat[key]) {
 					completeEvents.push({
+						event_num: key,
 						event: condObj.event[key],
 						bettypes: condObj.bettypes[key],
 						event_stat: condObj.event_stat[key]
@@ -86,8 +87,25 @@ define(function () {
 			});
 			return completeEvents;
 		},
-		checkFullEvent: function () {
 
+		checkFullEvent: function (condObj, portion, name) {
+			var names = ['event', 'event_stat', 'bettypes'],
+				i = _.indexOf(names, name),
+				isFull = true,
+				ev_num = portion['event_num'];
+			names.splice(i, 1);
+			if (_.some(condObj.completeEvents, function (eventObject) {
+				return ev_num === eventObject[event_num];
+			})) {
+				return isFull //true
+			} else {
+				_.each(names, function (name) {
+					if (!condObj[name][ev_num]) {
+						isFull = false;
+					}
+				});
+				return isFull;
+			}
 		},
 		getFromDictionary: function(code, marker, type) {  /* get name from dictionary using code */
 			var name = '',
@@ -112,6 +130,52 @@ define(function () {
 				}
 			}
 			return name;
+		},
+		startTime: function (startTime) {
+			var start = new Date(parseInt(startTime, 10) * 1000),
+				startString = '';
+			startString += start.getDay() + '.' + (start.getMonth() + 1) + ', ' + start.getHours() + ':' + start.getMinutes();
+			return startString;
+		},
+
+		getStatusFromDictionary: function (code) {
+			return LiveAPI.getFromDictionary(code, 'match_status');
+		},
+
+		getCategoryName: function (code) {
+			return LiveAPI.getFromDictionary(code, 'category');
+		},
+
+		getCompetiotorName: function (code) {
+			return LiveAPI.getFromDictionary(code, 'team');
+		},
+
+		getOutcomeName: function (code) {
+			return LiveAPI.getFromDictionary(code, 'outcome');
+		},
+
+		getBettypeName: function (code) {
+			return LiveAPI.getFromDictionary(code, 'bettype');
+		},
+
+		timeToStart: function (startTime) {
+			var start = new Date(parseInt(startTime, 10) * 1000),
+				now = new Date(),
+				tempTime,
+				timeToStartString = '';
+			tempTime = start.getDay() - now.getDay();
+			if (tempTime > 0) {
+				timeToStartString += tempTime + "д";
+			}
+			tempTime = start.getHours() - now.getHours();
+			if (tempTime > 0) {
+				timeToStartString += tempTime + "г";
+			}
+			tempTime = start.getMinutes() - now.getMinutes();
+			if (tempTime > 0) {
+				timeToStartString += tempTime + "хв";
+			}
+			return timeToStartString;
 		}
 	};
 	return LiveAPI;
