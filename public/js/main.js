@@ -18,11 +18,21 @@ require.config({
 		marionette: 'components/marionette/backbone.marionette',
 		/*app*/
 		app: 'app',
-		stage: 'app/stage'
+		stage: 'app/stage',
+		models: 'app/models',
+		collections: 'app/collections',
+		views: 'app/views/views',
+		templates: 'app/views/templates/pre_templates'
 	},
 	shim: {
 		stage: {
 			deps: ['jquery', 'underscore']
+		},
+		models: {
+			deps: ['backbone']
+		},
+		collections: {
+			deps: ['backbone', 'models']
 		},
 		app: {
 			deps: ['jquery']
@@ -45,10 +55,10 @@ require.config({
 
 });
 require(['app', 'backbone', 'cometController'], function (AppView, Backbone, transport) {
-	window.App = {
+	window.App = _.extend((window.App || {}), {
 		Vent: _.extend({}, Backbone.Events),
 		cond: {}
-	};
+	});
 	transport.init();
 	new AppView();
 });

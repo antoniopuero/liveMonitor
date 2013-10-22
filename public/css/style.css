@@ -80,6 +80,9 @@ body {
 
 
 /*main layer*/
+.event-wrapper {
+	display: inline-block;
+}
 .event {
 	font-size: 20px;
 

@@ -5,19 +5,21 @@
  * Time: 11:17
  * To change this template use File | Settings | File Templates.
  */
-define(['backbone', 'stage', 'app/models'], function (Backbone, LiveAPI, EventCollection) {
+define(['backbone', 'stage', 'collections/Events', 'views'], function (Backbone, LiveAPI, EventCollection, EventsView) {
 	var AppView = Backbone.View.extend({
 		el: 'body',
 		initialize: function () {
 
 			LiveAPI.setColumns(this.$el);
 			this.resize();
+			App.Vent.on('window:resize', this.resize, this);
 			window.addEventListener('resize', this.resize, false);
 			this.cloneEvents();
 
 			App.Vent.once('init:bets', function () {
 				App.cond.completeEvents = LiveAPI.checkCompleteEvents(App.cond);
 				App.cond.eventCollection = new EventCollection(App.cond.completeEvents);
+				new EventsView();
 			});
 			App.Vent.once('update:event', function (data) {
 				console.log(data);
@@ -44,11 +46,11 @@ define(['backbone', 'stage', 'app/models'], function (Backbone, LiveAPI, EventCo
 				'.castcode': [10, 20],
 				'.coef': [10,20]
 			}, styleElement);
-			LiveAPI.changeEventHeight('.event', $('#event-height'));
+//			LiveAPI.changeEventHeight('.event-wrapper', $('#event-height'));
 		},
 		/*for some test*/
 		cloneEvents: function () {
-			var event = $('.event');
+			var event = $('.event-wrapper');
 			for (var i = 0; i < 15; i += 1) {
 				this.$el.append(event.clone());
 			}

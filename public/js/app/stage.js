@@ -86,6 +86,9 @@ define(function () {
 			});
 			return completeEvents;
 		},
+		checkFullEvent: function () {
+
+		},
 		getFromDictionary: function(code, marker, type) {  /* get name from dictionary using code */
 			var name = '',
 				accord = false,
