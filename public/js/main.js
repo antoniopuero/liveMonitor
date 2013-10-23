@@ -15,9 +15,28 @@ require.config({
 		comet: 'components/cometd/cometd',
 		cometJquery: 'components/cometd/jquery.cometd',
 		cometController: 'components/cometd/cometd_controller',
-		marionette: 'components/marionette/backbone.marionette'
+		marionette: 'components/marionette/backbone.marionette',
+		/*app*/
+		app: 'app',
+		stage: 'app/stage',
+		models: 'app/models',
+		collections: 'app/collections',
+		views: 'app/views/views',
+		templates: 'app/views/templates/pre_templates'
 	},
 	shim: {
+		stage: {
+			deps: ['jquery', 'underscore']
+		},
+		models: {
+			deps: ['backbone']
+		},
+		collections: {
+			deps: ['backbone', 'models']
+		},
+		app: {
+			deps: ['jquery']
+		},
 		backbone: {
 			deps: ['jquery', 'underscore'],
 			exports: 'Backbone'
@@ -29,39 +48,16 @@ require.config({
 			deps: ['comet', 'jquery']
 		},
 		cometController: {
-			deps: ['jquery', 'comet', 'cometJquery']
+			deps: ['jquery', 'comet', 'cometJquery', 'stage']
 		}
 	},
 	urlArgs: "bust=" +  (new Date()).getTime()
 
 });
 require(['app', 'backbone', 'cometController'], function (AppView, Backbone, transport) {
-	window.App = {
-		Vent: _.extend({}, Backbone.Events)
-	};
-	App.Vent.once('init:event', function (data) {
-		console.log(data);
-	});
-	App.Vent.once('init:bets', function (data) {
-		console.log(data);
-	});
-	App.Vent.once('init:stat', function (data) {
-		console.log(data);
-	});
-	App.Vent.once('init:dictionary', function (data) {
-		console.log(data);
-	});
-	App.Vent.once('update:event', function (data) {
-		console.log(data);
-	});
-	App.Vent.once('update:bets', function (data) {
-		console.log(data);
-	});
-	App.Vent.once('update:stat', function (data) {
-		console.log(data);
-	});
-	App.Vent.once('update:dictionary', function (data) {
-		console.log(data);
+	window.App = _.extend((window.App || {}), {
+		Vent: _.extend({}, Backbone.Events),
+		cond: {}
 	});
 	transport.init();
 	new AppView();
