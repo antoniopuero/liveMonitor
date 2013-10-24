@@ -150,6 +150,8 @@ body {
 }
 
 .bettype-wrapper {
+	box-shadow: inset 1px 0px 12px rgba(0, 0, 0, 0.3), inset 3px 3px 3px rgba(255, 255, 255, 0.1), inset -3px 0px 3px rgba(0, 0, 0, 0.3), inset -7px -17px 15px rgba(255, 255, 255, 0.1) ;
+
 }
 
 .bettype-caption {
@@ -159,7 +161,6 @@ body {
 	color: #42535F;
 }
 .markets {
-	color: white;
 	background: #5DA35A;
 }
 .odd {
@@ -168,9 +169,17 @@ body {
 }
 .odd:last-child {
 }
+.outcome {
+	background: #58A583;
+	color: white;
+	box-shadow: inset 1px 0px 12px rgba(0, 0, 0, 0.3), inset 3px 3px 3px rgba(255, 255, 255, 0.1), inset -3px 0px 3px rgba(0, 0, 0, 0.3), inset -7px -17px 15px rgba(255, 255, 255, 0.1) ;
+	text-align: center;
+}
 .castcode {
+	text-align: center;
 	color: #feaa57;
 }
 .coef {
+	text-align: center;
 	color: #ffff00;
 }

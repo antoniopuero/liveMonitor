@@ -20,7 +20,6 @@ define(['backbone', 'stage', 'collections/Events', 'views'], function (Backbone,
 				new EventsView();
 			});
 			App.Vent.once('update:event', function (data) {
-				console.log(data);
 			});
 			App.Vent.once('update:bets', function (data) {
 				console.log(data);

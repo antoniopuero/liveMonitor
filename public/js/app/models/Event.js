@@ -5,8 +5,9 @@
  * Time: 10:13
  * To change this template use File | Settings | File Templates.
  */
-define(function () {
+define(['backbone'], function (Backbone) {
 	var Event = Backbone.Model.extend({
+		idAttribute: 'event_num',
 		initialize: function () {
 			this.on('change', function (model) {
 				console.log(model)

@@ -9,7 +9,7 @@ define(['models/Event'], function (Event) {
 	var Events = Backbone.Collection.extend({
 		model: Event,
 		initialize: function () {
-			console.log('new event');
+			console.log('first render');
 		}
 	});
 	return Events;
