@@ -112,7 +112,9 @@ body {
 .offset1 {
 	margin-left: 8.33%;
 }
-
+.text-center {
+	text-align: center;
+}
 
 
 /*main layer*/
@@ -142,21 +144,27 @@ body {
 
 .event-hat .score {
 }
+.bets-group-caption {
+	background: whitesmoke;
+	color: #000000;
+}
 
 .bettype-wrapper {
 }
+
 .bettype-caption {
-	background: #8ce9e6;
-	box-shadow: inset 1px 0px 12px rgba(0, 0, 0, 0.4), inset 7px 17px 15px rgba(255, 255, 255, 0.5), inset -1px 0px 15px rgba(0, 0, 0, 0.4), inset -7px -17px 15px rgba(255, 255, 255, 0.5)/* , 2px -1px 6px rgba(0, 0, 0, 0.3) */;
+	background: #C0FFFD;
+	box-shadow: inset 1px 0px 12px rgba(0, 0, 0, 0.3), inset 3px 3px 3px rgba(255, 255, 255, 0.1), inset -3px 0px 3px rgba(0, 0, 0, 0.3), inset -7px -17px 15px rgba(255, 255, 255, 0.1) ;
 	text-align: center;
 	color: #42535F;
 }
 .markets {
 	color: white;
-	background: green;
+	background: #5DA35A;
 }
 .odd {
-	box-shadow: inset 1px 0px 12px rgba(0, 0, 0, 0.4), inset 7px 17px 15px rgba(255, 255, 255, 0.2), inset -1px 0px 15px rgba(0, 0, 0, 0.4), inset -7px -17px 15px rgba(255, 255, 255, 0.2)/* , 2px -1px 6px rgba(0, 0, 0, 0.3) */;
+	background: rgb(63, 105, 63);
+	box-shadow: inset 1px 0px 12px rgba(0, 0, 0, 0.3), inset 3px 3px 3px rgba(255, 255, 255, 0.1), inset -3px 0px 3px rgba(0, 0, 0, 0.3), inset -7px -17px 15px rgba(255, 255, 255, 0.1) ;
 }
 .odd:last-child {
 }
