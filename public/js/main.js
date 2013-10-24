@@ -9,6 +9,7 @@ require.config({
 	paths: {
 		/* COMPONENTS */
 		json: 'components/json2',
+		jsonp: 'components/jquery.jsonp',
 		jquery: 'components/jquery/jquery',
 		underscore: 'components/underscore/underscore',
 		backbone: 'components/backbone/backbone',
@@ -44,8 +45,11 @@ require.config({
 		marionette: {
 			deps: ['backbone', 'json']
 		},
+		jsonp: {
+			deps: ['jquery']
+		},
 		cometJquery: {
-			deps: ['comet', 'jquery']
+			deps: ['comet', 'jquery', 'jsonp']
 		},
 		cometController: {
 			deps: ['jquery', 'comet', 'cometJquery', 'stage']

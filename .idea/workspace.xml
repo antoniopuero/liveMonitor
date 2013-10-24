@@ -5,9 +5,9 @@
     <ignored path="live3.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/app.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382431838441" ignored="false" />
-    <file path="/main.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382430623584" ignored="false" />
-    <file path="/cometd_controller.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382366835734" ignored="false" />
-    <file path="/style.css" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382427466189" ignored="false" />
+    <file path="/main.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382601809345" ignored="false" />
+    <file path="/cometd_controller.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382602683370" ignored="false" />
+    <file path="/style.css" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382603244135" ignored="false" />
     <file path="/bootstrap-responsive.css" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382339548529" ignored="false" />
     <file path="/bootstrap.css" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382339594111" ignored="false" />
     <file path="/index.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382427251279" ignored="false" />
@@ -28,6 +28,7 @@
     <file path="/FootballHat.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382453747116" ignored="false" />
     <file path="/bettype.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382455728773" ignored="false" />
     <file path="/odd.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382456065515" ignored="false" />
+    <file path="/eventblock.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382606608542" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,28 +57,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="16" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0032573289">
+            <state line="120" column="4" selection-start="1356" selection-end="1356" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.html">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="33" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/app/views/views.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="18" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0">
+            <state line="49" column="10" selection-start="1143" selection-end="1143" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -110,15 +102,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Event.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/Event.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="bettype.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/bettype.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -131,7 +114,25 @@
       <file leaf-file-name="stage.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/app/stage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="141" column="58" selection-start="3969" selection-end="3969" vertical-scroll-proportion="0.0">
+            <state line="154" column="10" selection-start="4274" selection-end="4274" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cometd_controller.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/components/cometd/cometd_controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="132" column="53" selection-start="3763" selection-end="3763" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="eventblock.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/eventblock.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="801" column="63" selection-start="37844" selection-end="37844" vertical-scroll-proportion="0.41960353">
               <folding />
             </state>
           </provider>
@@ -147,10 +148,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/js/env/views.js" />
-        <option value="$PROJECT_DIR$/public/js/main.js" />
-        <option value="$PROJECT_DIR$/public/js/app.js" />
-        <option value="$PROJECT_DIR$/public/js/app/views/templates/pre_templates.js" />
         <option value="$PROJECT_DIR$/public/js/app/models/Event.js" />
         <option value="$PROJECT_DIR$/public/js/app/views/views.js" />
         <option value="$PROJECT_DIR$/public/js/app/views/pre_templates/bet.html" />
@@ -162,7 +159,11 @@
         <option value="$PROJECT_DIR$/public/js/app/views/pre_templates/bettype.html" />
         <option value="$PROJECT_DIR$/public/js/app/views/pre_templates/odd.html" />
         <option value="$PROJECT_DIR$/public/js/app/views/pre_templates/Market.html" />
+        <option value="$PROJECT_DIR$/public/js/components/jquery.jsonp.js" />
+        <option value="$PROJECT_DIR$/public/js/main.js" />
+        <option value="$PROJECT_DIR$/public/js/components/cometd/cometd_controller.js" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/public/eventblock.html" />
       </list>
     </option>
   </component>
@@ -267,7 +268,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="live3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="live3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cometd" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -290,106 +317,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="live3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="live3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="live3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="live3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pre_templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="live3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="live3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="live3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="live3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -399,10 +326,14 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="web-ide.project.structure" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -412,6 +343,10 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
       <JSDebuggerConfigurationSettings>
         <option name="engineId" value="embedded" />
@@ -432,7 +367,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1874" height="1092" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -514,26 +449,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/js/app/collections/Events.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="17" selection-start="346" selection-end="346" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="10" selection-start="909" selection-end="909" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="76" selection-start="1467" selection-end="1467" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/views/templates/pre_templates.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="13701" selection-end="13701" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/app/views/views.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="18" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0">
@@ -543,26 +458,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="33" selection-start="327" selection-end="327" vertical-scroll-proportion="0.0">
+        <state line="10" column="33" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/start.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="371" column="0" selection-start="11029" selection-end="11029" vertical-scroll-proportion="2.5352423" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/Event.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="0" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/stage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="58" selection-start="3969" selection-end="3969" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -607,9 +510,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/components/jquery.jsonp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="285" column="0" selection-start="7673" selection-end="7673" vertical-scroll-proportion="1.7098501">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="10" selection-start="1143" selection-end="1143" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/app/stage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="154" column="10" selection-start="4274" selection-end="4274" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/start.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="371" column="0" selection-start="11029" selection-end="11029" vertical-scroll-proportion="3.078194">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/components/cometd/cometd_controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="132" column="53" selection-start="3763" selection-end="3763" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="16" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0032573289">
+        <state line="120" column="4" selection-start="1356" selection-end="1356" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/eventblock.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="801" column="63" selection-start="37844" selection-end="37844" vertical-scroll-proportion="0.41960353">
           <folding />
         </state>
       </provider>

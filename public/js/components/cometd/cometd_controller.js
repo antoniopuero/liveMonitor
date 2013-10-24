@@ -1,46 +1,61 @@
-
-
 define(['stage'], function (LiveAPI) {
 	var cometController = {
 
 		init : function(){
+			var self = this;
+			$.jsonp({
+				url: 'http://127.0.0.1/param/LIVE_CHANNEL',
+				success: function (data) {
+					self.LiveChannelID = data;
+					self.firstSteps();
+				},
+				error: function () {
+					console.error("ERROR!");
+					self.firstSteps();
+				}
+			});
+		},
+
+		clientIP :  null,
+		LiveChannelID: '',
+
+		firstSteps: function () {
 			var self = cometController;
-	//		jQuery.cometd.configure({url: LetLive._Helper_.parseUrl('comet') /*,advice: {interval:5000},logLevel: 'debug'*/});
-			jQuery.cometd.configure({url: "http://10.0.0.171:8080/lbs/test/cometd"  /*,logLevel: 'debug'*/});
+			jQuery.cometd.configure({url: "http://10.0.0.171:8080/lbs/test/cometd"});
 			jQuery.cometd.addListener('/meta/connect', self.connectionCallBackConnect);
 			jQuery.cometd.addListener('/service/data', self.connectionCallBackServiceData);
 			jQuery.cometd.registerExtension('lbs', self.LbsExtension());
 			jQuery.cometd.disconnect();
-			jQuery.cometd.handshake();
+			jQuery.cometd.handshake();				 /* HANDSHAKE */
 		},
-
-		clientIP :  null,
 
 		getURL : function(){
 			return '/lcbs/test/cometd/'
 		},
 
 	    lbsExtOutgoing : function(message){
+		    var self = cometController;
 	        if (!message.ext){
 	            message.ext = {};
 	        }
 
 	        if (cometD_controller.clientIP === null){
 	            message.ext.lbs = {
-	                soft_id: LetLive._Reg_.clientType
+	                soft_id: 'monitor'
 	            }
 	        }else {
 	            message.ext.lbs = {
 	                soft_id: LetLive._Reg_.clientType,
-	                ip: cometD_controller.clientIP
+	                ip: self.clientIP
 	            }
 	        }
 	    },
 
 		lbsExtIncoming :function(message) {
+			var self = cometController;
 
-	        if (message.ext && message.ext.lbs && message.ext.lbs.ip && cometD_controller.clientIP === null) {
-	            cometD_controller.clientIP = message.ext.lbs.ip;
+	        if (message.ext && message.ext.lbs && message.ext.lbs.ip && self.clientIP === null) {
+	            self.clientIP = message.ext.lbs.ip;
 	        }
 	    },
 		LbsExtension :function(){
@@ -74,7 +89,7 @@ define(['stage'], function (LiveAPI) {
 				self.wasConnected = self.connected;
 				self.connected = message.successful === true;
 				if (!self.wasConnected && self.connected){
-					self.theSubscribe('/data_o/event/*');
+					self.theSubscribe('/data_o/event/*', 'useId');
 
 				}else if (self.wasConnected && !self.connected){
 					self.connectionBroken();
@@ -82,8 +97,13 @@ define(['stage'], function (LiveAPI) {
 			}
 		},
 
-		theSubscribe :  function(channel){
-			jQuery.cometd.subscribe(channel, cometController.updatesCallBack);
+		theSubscribe :  function(channel, useChannelId){
+			if (useChannelId && this.LiveChannelID) {
+				channel = channel.split('/');
+				channel.splice(2, 0, this.LiveChannelID);
+				channel = channel.join('/');
+			}
+			jQuery.cometd.subscribe(channel, this.updatesCallBack);
 		},
 
 		theUnSubscribe : function(channel){
@@ -94,52 +114,52 @@ define(['stage'], function (LiveAPI) {
 		connectionCallBackServiceData : function(message){
 			var self = cometController,
 				data = message.data.response,
-				information = data.data;
+				information = data.data,
+				correlation = {
+					bettypes: function (information) {
+						App.cond.bettypes = LiveAPI.convertArrayIntoObject(information, 'event_num');
+						App.Vent.trigger('init:bets', information);
+					},
+					event: function (information) {
+						App.cond.event = LiveAPI.convertArrayIntoObject(information, 'event_num');
+						App.Vent.trigger('init:event', information);
+						self.theSubscribe('/data_o/dictionary/ua');
+					},
+					event_stat: function (information) {
+						App.cond.event_stat = LiveAPI.convertArrayIntoObject(information, 'event_num');
+						App.Vent.trigger('init:stat', information);
+						self.theSubscribe('/data_o/bettypes/*', 'useId');
+					},
+					dictionary: function (information) {
+						App.cond.dictionary = LiveAPI.convertArrayIntoObject(information, 'event_num');
+						App.Vent.trigger('init:dictionary', information);
+						self.theSubscribe('/data_o/event_stat/*', 'useId');
+					}
+				};
 			for (var messageType in information) {
-				information = information[messageType];
-			}; //for string value of type
-
-			switch(messageType){
-				case 'event':
-					App.cond.event = LiveAPI.convertArrayIntoObject(information, 'event_num');
-					App.Vent.trigger('init:event', information);
-					self.theSubscribe('/data_o/dictionary/ua');
-					break;
-				case 'dictionary':
-					App.cond.dictionary = LiveAPI.convertArrayIntoObject(information, 'event_num');
-					App.Vent.trigger('init:dictionary', information);
-					self.theSubscribe('/data_o/event_stat/*');
-
-					break;
-				case 'event_stat':
-					App.cond.event_stat = LiveAPI.convertArrayIntoObject(information, 'event_num');
-					App.Vent.trigger('init:stat', information);
-					self.theSubscribe('/data_o/bettypes/*');
-					break;
-				case 'bettypes':
-					App.cond.bettypes = LiveAPI.convertArrayIntoObject(information, 'event_num');
-					App.Vent.trigger('init:bets', information);
-					break;
-			}
+				correlation[messageType](information[messageType]);
+			};
 
 		},
 		updatesCallBack : function(message){
 			var data = message.data.response,
-				information = data.data;
-			for (var messageType in data.data);
-			switch(messageType){
-				case 'bettypes':
-					App.Vent.trigger('update:bets', information);
-					break;
-				case 'event':
-					App.Vent.trigger('update:event', information);
-					break;
-				case 'event_stat':
-					App.Vent.trigger('update:stat', information);
-					break;
-				case 'dictionary':
-					App.Vent.trigger('update:dictionary', information);
-					break;
+				information = data.data,
+				correlation = {
+					bettypes: function (information) {
+						App.Vent.trigger('update:bets', information);
+					},
+					event: function (information) {
+						App.Vent.trigger('update:event', information);
+					},
+					event_stat: function (information) {
+						App.Vent.trigger('update:stat', information);
+					},
+					dictionary: function (information) {
+						App.Vent.trigger('update:dictionary', information);
+					}
+				};
+			for (var messageType in information) {
+				correlation[messageType](information[messageType]);
 			}
 		}
 	};
