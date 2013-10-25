@@ -5,12 +5,12 @@
  * Time: 11:27
  * To change this template use File | Settings | File Templates.
  */
-define(['templates'], function (templates) {
+define(['templates', 'backbone'], function (templates, Backbone) {
 
 
 	var EventView = Backbone.View.extend({
 		className: 'event-wrapper',
-		template: templates.event,
+		template: templates.rowtest,
 		render: function () {
 			this.$el.html(this.template(this.model.attributes));
 			return this;

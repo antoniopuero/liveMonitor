@@ -13,6 +13,7 @@ define(function () {
 				maxTextLength = 0,
 				tempCof;
 			maxSize = maxSize ? maxSize : 25;
+			minSize = minSize ? minSize : 8;
 			blockGroup.each(function () {
 				var $this = $(this),
 					blockWidth = $this.width(),
@@ -32,7 +33,7 @@ define(function () {
 			} else {
 				maxSize = tempCof;
 			}
-			return maxSize;
+			return maxSize + 1;
 		},
 
 		useResizedFonts: function (selectors, styleContainer) {
@@ -83,6 +84,7 @@ define(function () {
 					delete condObj.event[key];
 					delete condObj.bettypes[key];
 					delete condObj.event_stat[key];
+
 				}
 			});
 			return completeEvents;
@@ -136,6 +138,12 @@ define(function () {
 				startString = '';
 			startString += start.getDay() + '.' + (start.getMonth() + 1) + ', ' + start.getHours() + ':' + start.getMinutes();
 			return startString;
+		},
+		preCompile: function (eventObj) {
+			var self = LiveAPI,
+				competitors = eventObj.event.competitors;
+			competitors.home.name = self.getCompetiotorName(competitors.home.code);
+			competitors.away.name = self.getCompetiotorName(competitors.away.code);
 		},
 
 		getStatusFromDictionary: function (code) {
