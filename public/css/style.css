@@ -19,6 +19,7 @@ body {
 	width: 100%;
 }
 .row-fluid > [class^="span"] {
+    position: relative;
 	float: left;
 }
 /*.row-fluid > [class^="span"]:last-child:after {*/
@@ -182,4 +183,11 @@ body {
 .coef {
 	text-align: center;
 	color: #ffff00;
+}
+
+/*for vertical align*/
+.event-information {
+    height: inherit;
+    bottom: 0;
+    left: 0;
 }
