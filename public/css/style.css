@@ -122,29 +122,22 @@ body {
 .event-wrapper {
 	display: inline-block;
 	width: 100%;
+	background: #5DA35A;
 }
 .event {
 	font-size: 20px;
-
 }
 .event-hat {
-	background: #97f6c0;
-	box-shadow: inset 1px 0px 12px rgba(0, 0, 0, 0.4), inset 7px 17px 15px rgba(255, 255, 255, 0.5), inset -1px 0px 15px rgba(0, 0, 0, 0.4), inset -7px -17px 15px rgba(255, 255, 255, 0.5)/* , 2px -1px 6px rgba(0, 0, 0, 0.3) */;
-
+	background: #C0FFFD;
+	box-shadow: inset 1px 0px 12px rgba(0, 0, 0, 0.3), inset 3px 3px 3px rgba(255, 255, 255, 0.1), inset -3px 0px 3px rgba(0, 0, 0, 0.3), inset -7px -17px 15px rgba(255, 255, 255, 0.1) ;
 }
-.event-hat .begin {
-	color: #7A563D;
-	text-align: right;
-}
-.event-hat .competitors {
-	text-align: center;
-	color: #42535F;
-}
-.event-hat .time-left {
+.event-hat img{
+	display: inline-block;
+	margin: 0 10px;
+	width: 20px;
+	height: 20px;
 }
 
-.event-hat .score {
-}
 .bets-group-caption {
 	background: whitesmoke;
 	color: #000000;
@@ -162,7 +155,7 @@ body {
 	color: #42535F;
 }
 .markets {
-	background: #5DA35A;
+	/*background: #5DA35A;*/
 }
 .odd {
 	background: rgb(63, 105, 63);
@@ -184,10 +177,30 @@ body {
 	text-align: center;
 	color: #ffff00;
 }
+.span2.event-information, .span1.event-information {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	background: #97f6c0;
+	box-shadow: inset 1px 0px 12px rgba(0, 0, 0, 0.3), inset 3px 3px 3px rgba(255, 255, 255, 0.1), inset -3px 0px 3px rgba(0, 0, 0, 0.3), inset -7px -17px 15px rgba(255, 255, 255, 0.1) ;
+}
+.event-information div{
+	box-shadow: inset 1px 0px 12px rgba(0, 0, 0, 0.3), inset 3px 3px 3px rgba(255, 255, 255, 0.1), inset -3px 0px 3px rgba(0, 0, 0, 0.3), inset -7px -17px 15px rgba(255, 255, 255, 0.1) ;
+}
+.event-information .begin {
+	color: #7A563D;
+}
+.event-information .competitors {
+	text-align: center;
+	color: #42535F;
+}
+.event-information .time-left {
+}
 
-/*for vertical align*/
-.event-information {
-    height: inherit;
-    bottom: 0;
-    left: 0;
+.event-information .score {
+}
+
+.break-line {
+	height: 4px;
+	background: #00705A;
 }

@@ -34,10 +34,11 @@ define(['backbone', 'stage', 'collections/Events', 'views'], function (Backbone,
 		resize: function () {
 			var styleElement = $('#computed-style');
 			LiveAPI.useResizedFonts({
-				'.competitors': [20, 30],
-				'.service-inform': [16, 20],
-				'.score': [16, 25],
-				'.status': [16, 25],
+				'.event-hat': [16, 20],
+				'.competitors': [20, 35],
+				'.begin': [16, 20],
+//				'.score': [16, 25],
+				'.match-status': [16, 20],
 				'.bettype-caption': [12, 25],
 				'.outcome': [10, 20],
 				'.castcode': [10, 20],
