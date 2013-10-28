@@ -59,6 +59,7 @@ require.config({
 
 });
 require(['app', 'backbone', 'cometController'], function (AppView, Backbone, transport) {
+	
 	window.App = _.extend((window.App || {}), {
 		Vent: _.extend({}, Backbone.Events),
 		cond: {}
