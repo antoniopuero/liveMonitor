@@ -5,29 +5,7 @@
  * Time: 11:27
  * To change this template use File | Settings | File Templates.
  */
-define(['templates', 'backbone'], function (templates, Backbone) {
-
-
-	var EventView = Backbone.View.extend({
-		className: 'event-wrapper',
-		template: templates.rowtest,
-		render: function () {
-			this.$el.html(this.template(this.model.attributes));
-			return this;
-		},
-		renderHat: function () {
-
-		},
-		renderBettype: function () {
-
-		},
-		renderMarket: function () {
-
-		},
-		renderBet: function () {
-
-		}
-	});
+define(['templates', 'backbone', 'views/singleView'], function (templates, Backbone, EventView) {
 
 
 	var EventsView = Backbone.View.extend({

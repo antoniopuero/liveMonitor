@@ -30,7 +30,7 @@ define(['stage'], function (LiveAPI) {
 		},
 
 		getURL : function(){
-			return '/lcbs/test/cometd/'
+			return '/lbs/test/cometd/'
 		},
 
 	    lbsExtOutgoing : function(message){

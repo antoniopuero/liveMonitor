@@ -22,7 +22,7 @@ require.config({
 		stage: 'app/stage',
 		models: 'app/models',
 		collections: 'app/collections',
-		views: 'app/views/views',
+		views: 'app/views',
 		templates: 'app/views/templates/pre_templates'
 	},
 	shim: {
@@ -59,11 +59,16 @@ require.config({
 
 });
 require(['app', 'backbone', 'cometController'], function (AppView, Backbone, transport) {
-	
+
+	Backbone.Model.prototype._super = function(funcName){
+		return this.constructor.prototype[funcName].apply(this, _.rest(arguments));
+	}
 	window.App = _.extend((window.App || {}), {
 		Vent: _.extend({}, Backbone.Events),
-		cond: {}
+		cond: {
+			eventCollection: {}
+		}
 	});
-	transport.init();
 	new AppView();
+	transport.init();
 });
