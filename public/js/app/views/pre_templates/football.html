@@ -4,52 +4,28 @@
 <div class="row-fluid foootbal-main-bets">
 <div class="span2 event-information">
 	<div class="row-fluid class event-hat"><img src="img/sport_1.png"><%= event_num %></div>
-	<div class="row-fluid begin text-center">23.11-19:00</div>
-	<div class="row-fluid competitors text-center"> Динамо-Шахтар</div>
+	<div class="row-fluid begin text-center"><%= event.starttime %></div>
+	<div class="row-fluid competitors text-center"> <%= event.competitors.home.name %> - <%= event.competitors.away.name %> </div>
 	<div class="row-fluid score text-center match-status">
-		<div class="span6 score text-center">2:1</div>
-		<div class="span6 status text-center">1 тайм/34'</div>
+		<div class="span6 score text-center"> <%= event_stat.score %></div>
+		<div class="span6 status text-center"><%= event.status %></div>
 	</div>
 </div>
 <div class="span2 offset2">
 	<div class="row-fluid">
-		<div class="container-fluid bettype-wrapper">
-			<div class="row-fluid bettype-caption">Основні підсумки</div>
+		<% if (bettypes[1]) { %>
+		<div class="container-fluid bettype-wrapper" bettype="1">
+			<div class="row-fluid bettype-caption"><%= bettypes[1].name %></div>
 			<div class="container-fluid markets">
-				<div class="row-fluid market-wrappers">
-					<div class="span4 bet">
-						<div class="container-fluid">
-							<div class="row-fluid  outcome">1</div>
-							<div class="row-fluid odd">
-								<div class="span4 castcode">|228|</div>
-								<div class="span8 coef">8.88</div>
-							</div>
-						</div>
-					</div>
-					<div class="span4 bet">
-						<div class="container-fluid">
-							<div class="row-fluid  outcome">X</div>
-							<div class="row-fluid odd">
-								<div class="span4 castcode">|228|</div>
-								<div class="span8 coef">8.88</div>
-							</div>
-						</div>
-					</div>
-					<div class="span4 bet">
-						<div class="container-fluid">
-							<div class="row-fluid  outcome">2</div>
-							<div class="row-fluid odd">
-								<div class="span4 castcode">|228|</div>
-								<div class="span8 coef">8.88</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				<%
+				this.renderMarket();
+				%>
 			</div>
 		</div>
+		<% } %>
 	</div>
 	<div class="row-fluid">
-		<div class="container-fluid bettype-wrapper">
+		<div class="container-fluid bettype-wrapper" bettype="3">
 			<div class="row-fluid bettype-caption">Подвійні підсумки</div>
 			<div class="container-fluid markets">
 				<div class="row-fluid market-wrappers">

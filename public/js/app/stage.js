@@ -52,16 +52,6 @@ define(function () {
 			});
 		},
 
-		changeEventHeight: function (eventSelector, styleContainer) {
-			styleContainer.text();
-			var events = $(eventSelector),
-				height = events.height(),
-				viewPortHeight = $('html').height(),
-				eventCount = Math.floor(viewPortHeight / height),
-				possibleHeight = Math.floor(viewPortHeight / eventCount);
-			styleContainer.text(eventSelector + ' {height: ' + possibleHeight + 'px;}');
-		},
-
 		convertArrayIntoObject: function (array, param) {
 			var resultObj = {};
 			_.each(array, function (value) {
@@ -93,7 +83,6 @@ define(function () {
 			return completeEvents;
 		},
 		compileEvent: function (event_num, event, bettypes, event_stat) {
-			console.log(arguments)
 			var self = LiveAPI,
 				compiledEvent = {
 				event_num: event_num,
@@ -167,22 +156,21 @@ define(function () {
 				var type = bettypePortion.type;
 				if ( !sortedMarkets[type] ) {
 					sortedMarkets[type] = {
-						name: self.getBettypeName(type)
+						name: self.getBettypeName(type),
+						markets: []
 					};
 				}
 				bettypePortion.odds = self.sortOdds(bettypePortion.odds);
-				sortedMarkets[type][bettypePortion.market] = bettypePortion;
+				sortedMarkets[type].markets.push(bettypePortion);
 			});
 			return sortedMarkets;
 		},
 		sortOdds: function (aOdds) {
-			var self = LiveAPI,
-				sortedOdds = {};
+			var self = LiveAPI;
 			_.each(aOdds, function (odd) {
 				odd.outcome = self.getOutcomeName(odd.outcome_code);
-				sortedOdds[odd.code] = odd;
 			});
-			return sortedOdds;
+			return aOdds;
 		},
 		startTime: function (startTime) {
 			var start = new Date(parseInt(startTime, 10) * 1000),

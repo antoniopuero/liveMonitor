@@ -1,0 +1,20 @@
+<div class="row-fluid market-wrappers" market="<%= market %>">
+	<%
+	var len = odds.length,
+	size;
+	switch (len) {
+		case 2:
+			size = 'span6';
+			break;
+		case 3:
+			size = 'span4';
+			break;
+		default:
+			size = 'span12';
+			break;
+	}
+	_.each(odds, function (odd) {
+		window.App.templates.odd({size: size, odd: odd});
+	});
+	%>
+</div>
