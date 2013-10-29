@@ -157,10 +157,14 @@ define(function () {
 				if ( !sortedMarkets[type] ) {
 					sortedMarkets[type] = {
 						name: self.getBettypeName(type),
-						markets: []
+						markets: [],
+						status: 'blocked'
 					};
 				}
 				bettypePortion.odds = self.sortOdds(bettypePortion.odds);
+				if (bettypePortion.status == "open") {
+					sortedMarkets[type].status = 'open';
+				}
 				sortedMarkets[type].markets.push(bettypePortion);
 			});
 			return sortedMarkets;

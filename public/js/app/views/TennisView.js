@@ -8,7 +8,7 @@
 define(['templates', 'views/singleView', 'views/views'], function (templates, EventView, EventsView) {
 
 	var TennisView = EventView.extend({
-		template: templates.tennis
+		template: templates.tennisTemplate
 	});
 
 

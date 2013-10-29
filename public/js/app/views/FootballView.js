@@ -8,16 +8,8 @@
 define(['templates', 'views/singleView', 'views/views'], function (templates, EventView, EventsView) {
 
 	var FootballView = EventView.extend({
-		template: templates.football,
+		template: templates.footballTemplate,
 		initialize: function () {
-			window.App.templates.market = templates.market;
-			window.App.templates.odd = templates.odd;
-		},
-		renderMarket: function () {
-			console.log('jopa');
-		},
-		renderOdd: function () {
-
 		}
 	});
 

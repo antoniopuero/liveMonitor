@@ -122,10 +122,10 @@ body {
 .event-wrapper {
 	display: inline-block;
 	width: 100%;
+	min-height: 50px;
 	background: #5DA35A;
 }
 .event {
-	font-size: 20px;
 }
 .event-hat {
 	background: #C0FFFD;
@@ -177,7 +177,7 @@ body {
 	text-align: center;
 	color: #ffff00;
 }
-.span2.event-information, .span1.event-information {
+.span2.event-information {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -211,3 +211,34 @@ body {
 	height: 4px;
 	background: #00705A;
 }
+
+
+.bettype-wrapper.open {
+	display: block;
+}
+.bettype-wrapper {
+	display: none;
+}
+.market-wrapper.open {
+	display: block;
+}
+.market-wrapper {
+	display: none;
+}
+.bet.open {
+	visibility: visible;
+}
+.bet {
+	visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
