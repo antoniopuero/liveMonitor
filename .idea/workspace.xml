@@ -120,7 +120,7 @@
       <file leaf-file-name="pre_templates.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/app/views/templates/pre_templates.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="365" column="0" selection-start="18493" selection-end="18493" vertical-scroll-proportion="0.88972974">
+            <state line="365" column="0" selection-start="18493" selection-end="18493" vertical-scroll-proportion="6.6713514">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -491,8 +491,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../uwc" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -708,7 +708,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/app/views/templates/pre_templates.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="365" column="0" selection-start="18493" selection-end="18493" vertical-scroll-proportion="0.88972974">
+        <state line="365" column="0" selection-start="18493" selection-end="18493" vertical-scroll-proportion="6.6713514">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
