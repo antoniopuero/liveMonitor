@@ -4,17 +4,17 @@
     <list default="true" id="37d584d4-d388-4547-8dfa-a3f39cb86fda" name="Default" comment="" />
     <ignored path="live3.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/app.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382950952142" ignored="false" />
+    <file path="/app.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383149707628" ignored="false" />
     <file path="/main.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383032563517" ignored="false" />
-    <file path="/cometd_controller.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382602683370" ignored="false" />
-    <file path="/style.css" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383061080442" ignored="false" />
+    <file path="/cometd_controller.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383140573678" ignored="false" />
+    <file path="/style.css" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383145820719" ignored="false" />
     <file path="/bootstrap-responsive.css" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382339548529" ignored="false" />
     <file path="/bootstrap.css" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382339594111" ignored="false" />
     <file path="/index.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382945106481" ignored="false" />
     <file path="/*.regexp" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382630455638" ignored="false" />
     <file path="/stage.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383060058458" ignored="false" />
     <file path="/controller.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382345284320" ignored="false" />
-    <file path="$PROJECT_DIR$/../newStatic/public/monitor_8/stage/js/env/client/monitor/controller.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382345285321" ignored="false" />
+    <file path="$PROJECT_DIR$/../newStatic/public/monitor_8/stage/js/env/client/monitor/controller.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383135090209" ignored="false" />
     <file path="/models.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382368950721" ignored="false" />
     <file path="/collections.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382425871649" ignored="false" />
     <file path="/Events.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382426221302" ignored="false" />
@@ -24,7 +24,7 @@
     <file path="/pre_templates.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382975578697" ignored="false" />
     <file path="C:/OpenServer/domains/brunch/public/js/littleLive/connect.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382449638133" ignored="false" />
     <file path="C:/OpenServer/domains/brunch/public/skin/evobet/css/littleLive.css" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382449740976" ignored="false" />
-    <file path="/Dummy.txt" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382449820321" ignored="false" />
+    <file path="/Dummy.txt" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383135088074" ignored="false" />
     <file path="/FootballHat.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382453747116" ignored="false" />
     <file path="/bettype.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382455728773" ignored="false" />
     <file path="/odd.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383036982637" ignored="false" />
@@ -41,14 +41,27 @@
     <file path="/FootballEvent.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382945878086" ignored="false" />
     <file path="/TennisEvent.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382945926060" ignored="false" />
     <file path="/TennisCollection.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382948337121" ignored="false" />
-    <file path="/FootballView.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383039155917" ignored="false" />
-    <file path="/singleView.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383039236318" ignored="false" />
-    <file path="/TennisView.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383039164749" ignored="false" />
+    <file path="/FootballView.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383152371090" ignored="false" />
+    <file path="/singleView.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383150780421" ignored="false" />
+    <file path="/TennisView.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383149671741" ignored="false" />
     <file path="/football.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383035539997" ignored="false" />
     <file path="/market.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383038189372" ignored="false" />
     <file path="/foraOdd.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383037091744" ignored="false" />
-    <file path="/tennisTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383056613180" ignored="false" />
-    <file path="/footballTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383059524125" ignored="false" />
+    <file path="/tennisTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383145028077" ignored="false" />
+    <file path="/footballTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383151639287" ignored="false" />
+    <file path="/setTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383139184994" ignored="false" />
+    <file path="/footballHatTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383133071091" ignored="false" />
+    <file path="$PROJECT_DIR$/../newStatic/public/monitor/stage/js/env/transport/comet/cometd_controller.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383141090874" ignored="false" />
+    <file path="$PROJECT_DIR$/../newStatic/public/terminal/stage/js/env/transport/comet/cometd_controller.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383134439280" ignored="false" />
+    <file path="C:/OpenServer/domains/dev/public/sportliga/js/live/env/transport/comet/cometd_controller.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383135745329" ignored="false" />
+    <file path="/secondTimeTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383136003406" ignored="false" />
+    <file path="/tennisHatTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383145425762" ignored="false" />
+    <file path="$PROJECT_DIR$/../newStatic/public/monitor/stage/js/app/run.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383140253896" ignored="false" />
+    <file path="$PROJECT_DIR$/../newStatic/public/monitor/stage/js/app/transport.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383140337832" ignored="false" />
+    <file path="/transport.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383140263264" ignored="false" />
+    <file path="/TennisScore.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383146237468" ignored="false" />
+    <file path="/beforeScoreTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383146545610" ignored="false" />
+    <file path="/firstTimeTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383152203050" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,10 +81,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pre_templates.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TennisView.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/app/views/TennisView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="33" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tennisTemplate.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/tennisTemplate.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="89" column="6" selection-start="2735" selection-end="2735" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FootballView.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/app/views/FootballView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="72" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="singleView.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/app/views/singleView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="28" selection-start="507" selection-end="507" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pre_templates.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/app/views/templates/pre_templates.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="273" column="6" selection-start="18255" selection-end="18255" vertical-scroll-proportion="0.0">
+            <state line="365" column="0" selection-start="18493" selection-end="18493" vertical-scroll-proportion="0.88972974">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -82,34 +131,16 @@
       <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="20" selection-start="1447" selection-end="1447" vertical-scroll-proportion="0.0">
+            <state line="158" column="0" selection-start="2353" selection-end="2353" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="setTemplate.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/setTemplate.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="45" selection-start="603" selection-end="603" vertical-scroll-proportion="-13.076923">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="firstTimeTemplate.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/firstTimeTemplate.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="secondTimeTemplate.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="secondTimeTemplate.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/secondTimeTemplate.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="1" column="27" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -124,10 +155,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tennisTemplate.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/tennisTemplate.html">
+      <file leaf-file-name="firstTimeTemplate.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/firstTimeTemplate.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="6" selection-start="3166" selection-end="3166" vertical-scroll-proportion="-28.538462">
+            <state line="3" column="18" selection-start="139" selection-end="166" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -136,25 +167,7 @@
       <file leaf-file-name="footballTemplate.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/footballTemplate.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="132" column="72" selection-start="4499" selection-end="4499" vertical-scroll-proportion="-26.493507">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stage.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/app/stage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="164" column="54" selection-start="4785" selection-end="4785" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="oddTemplate.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/oddTemplate.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="28" selection-start="25" selection-end="28" vertical-scroll-proportion="-0.0">
+            <state line="79" column="45" selection-start="2645" selection-end="2645" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -170,22 +183,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/js/app/views/pre_templates/market.html" />
-        <option value="$PROJECT_DIR$/public/js/app/views/pre_templates/odd.html" />
-        <option value="$PROJECT_DIR$/public/js/app/views/pre_templates/foraOdd.html" />
-        <option value="$PROJECT_DIR$/public/js/app/views/pre_templates/foraOddTemplate.html" />
-        <option value="$PROJECT_DIR$/public/js/app/views/TennisView.js" />
-        <option value="$PROJECT_DIR$/public/js/app/views/FootballView.js" />
-        <option value="$PROJECT_DIR$/public/js/app/views/singleView.js" />
-        <option value="$PROJECT_DIR$/public/js/app/views/pre_templates/marketTemplate.html" />
-        <option value="$PROJECT_DIR$/public/js/app/stage.js" />
-        <option value="$PROJECT_DIR$/public/js/app/views/pre_templates/footballTemplate.html" />
-        <option value="$PROJECT_DIR$/public/js/app/views/templates/pre_templates.js" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/public/js/app/views/pre_templates/tennisTemplate.html" />
-        <option value="$PROJECT_DIR$/public/js/app/views/pre_templates/setTemplate.html" />
+        <option value="$PROJECT_DIR$/public/js/app/collections/Events.js" />
+        <option value="$PROJECT_DIR$/public/js/app/collections/FootballCollection.js" />
+        <option value="$PROJECT_DIR$/public/js/app/collections/TennisCollection.js" />
+        <option value="$PROJECT_DIR$/public/js/app/models/Event.js" />
+        <option value="$PROJECT_DIR$/public/js/app/models/FootballEvent.js" />
+        <option value="$PROJECT_DIR$/public/js/app/models/TennisEvent.js" />
+        <option value="$PROJECT_DIR$/public/js/app.js" />
+        <option value="$PROJECT_DIR$/public/js/app/views/singleView.js" />
+        <option value="$PROJECT_DIR$/public/js/app/views/TennisView.js" />
+        <option value="$PROJECT_DIR$/public/js/components/cometd/cometd_controller.js" />
+        <option value="$PROJECT_DIR$/public/js/app/views/pre_templates/footballTemplate.html" />
         <option value="$PROJECT_DIR$/public/js/app/views/pre_templates/firstTimeTemplate.html" />
         <option value="$PROJECT_DIR$/public/js/app/views/pre_templates/secondTimeTemplate.html" />
+        <option value="$PROJECT_DIR$/public/js/app/views/FootballView.js" />
+        <option value="$PROJECT_DIR$/public/js/app/views/templates/pre_templates.js" />
       </list>
     </option>
   </component>
@@ -478,13 +491,17 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../uwc" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\a.savchenko\Desktop\WorkingAt\live3\public\js\app\views\backup" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\a.savchenko\Desktop\WorkingAt\live3\public" />
+      <recent name="C:\Users\a.savchenko\Desktop\WorkingAt\live3\public\js\app\views\pre_templates" />
       <recent name="C:\Users\a.savchenko\Desktop\WorkingAt\live3\public\js\app\views" />
+      <recent name="C:\Users\a.savchenko\Desktop\WorkingAt\live3\public" />
       <recent name="C:\Users\a.savchenko\Desktop\WorkingAt\live3\public\js\app" />
       <recent name="C:\Users\a.savchenko\Desktop\WorkingAt\live3\public\js\env\pre_templates" />
     </key>
@@ -513,14 +530,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1874" height="1096" extended-state="0" />
-    <editor active="true" />
+    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497309" sideWeight="0.6701245" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497309" sideWeight="0.6701245" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992464" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -596,61 +613,74 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/public/js/app/models/FootballEvent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="9" selection-start="309" selection-end="309" vertical-scroll-proportion="0.19936034" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/app/collections/TennisCollection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="9" selection-start="380" selection-end="380" vertical-scroll-proportion="0.21748401" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="41" selection-start="2228" selection-end="2228" vertical-scroll-proportion="0.0">
+        <state line="43" column="82" selection-start="1495" selection-end="1495" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/tennisScoreTemplate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/tennisHatTemplate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/components/cometd/cometd_controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="81" selection-start="894" selection-end="894" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/app/views/TennisView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="33" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/app/views/singleView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="55" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/foraOddTemplate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="59" selection-start="133" selection-end="133" vertical-scroll-proportion="-1.3076923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/marketTemplate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="36" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/views/FootballView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="33" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1383039194236" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1383039194236" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/views/TennisView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="42" selection-start="339" selection-end="339" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/stage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="164" column="54" selection-start="4785" selection-end="4785" vertical-scroll-proportion="0.0">
+        <state line="18" column="28" selection-start="507" selection-end="507" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/footballTemplate.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="72" selection-start="4499" selection-end="4499" vertical-scroll-proportion="-26.493507">
+        <state line="79" column="45" selection-start="2645" selection-end="2645" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/tennisTemplate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="6" selection-start="2735" selection-end="2735" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/firstTimeTemplate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="18" selection-start="139" selection-end="166" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/app/views/FootballView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="72" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -662,54 +692,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/views/templates/pre_templates.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="273" column="6" selection-start="18255" selection-end="18255" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="20" selection-start="1447" selection-end="1447" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/tennisTemplate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="6" selection-start="3166" selection-end="3166" vertical-scroll-proportion="-28.538462">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/oddTemplate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="28" selection-start="25" selection-end="28" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/setTemplate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="45" selection-start="603" selection-end="603" vertical-scroll-proportion="-13.076923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/firstTimeTemplate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="158" column="0" selection-start="2353" selection-end="2353" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/secondTimeTemplate.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="1" column="27" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/app/views/templates/pre_templates.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="365" column="0" selection-start="18493" selection-end="18493" vertical-scroll-proportion="0.88972974">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

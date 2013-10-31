@@ -5,10 +5,31 @@
  * Time: 9:42
  * To change this template use File | Settings | File Templates.
  */
-define(['templates', 'views/singleView', 'views/views'], function (templates, EventView, EventsView) {
+define(['templates', 'views/singleView', 'views/collectionView'], function (templates, EventView, EventsView) {
 
 	var TennisView = EventView.extend({
-		template: templates.tennisTemplate
+		template: templates.tennisTemplate,
+		initialize: function () {
+		},
+		renderHat: function () {
+			return templates.setTemplate(this.model.attributes);
+		},
+		renderScore: function (status) {
+			var templateEngine;
+			if (status == "not_started") {
+				templateEngine = templates.beforeScpreTemplate;
+			} else {
+				templateEngine = templates.tennisScoreTemplate;
+			}
+			return templateEngine(this.model.attributes);
+		},
+		renderSetBets: function () {
+
+		},
+		getPeriod: function (status) {
+			var period =  /\d/.exec(status);
+			return period ? period[0] : false;
+		}
 	});
 
 

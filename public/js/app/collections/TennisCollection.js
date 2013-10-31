@@ -9,7 +9,7 @@ define(['models/TennisEvent', 'collections/Events'], function (TennisEvent, Even
 	var TennisCollection = Events.extend({
 		model: TennisEvent,
 		initialize: function () {
-			console.log('tennis collection');
+//			console.log('tennis collection');
 		}
 	});
 	return TennisCollection;

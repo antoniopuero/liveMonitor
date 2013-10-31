@@ -74,6 +74,9 @@ body {
 .span2 {
 	width:16.66%;
 }
+.span1half { /* 1.5 */
+	width:12.5%;
+}
 .span1 {
 	width: 8.33%;
 }
@@ -122,7 +125,6 @@ body {
 .event-wrapper {
 	display: inline-block;
 	width: 100%;
-	min-height: 50px;
 	background: #5DA35A;
 }
 .event {
@@ -207,10 +209,10 @@ body {
 	text-align: center;
 }
 
-.break-line {
-	height: 4px;
-	background: #00705A;
-}
+/*.break-line {*/
+	/*height: 4px;*/
+	/*background: #00705A;*/
+/*}*/
 
 
 .bettype-wrapper.open {

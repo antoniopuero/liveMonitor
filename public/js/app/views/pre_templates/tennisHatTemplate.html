@@ -1,0 +1,6 @@
+<div class="row-fluid tennis-hat event-hat">
+	<div class="span1 event-num"><img src="img/sport_1.png"><%= event_num %></div>
+	<div class="span1 event-status"><%= event.starttime %></div>
+	<div class="span6 competitors text-center"> <%= event.competitors.home.name %> - <%= event.competitors.away.name %> </div>
+	<%= this.renderScore() %>
+</div>

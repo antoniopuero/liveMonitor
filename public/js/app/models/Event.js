@@ -10,7 +10,7 @@ define(['backbone'], function (Backbone) {
 		idAttribute: 'event_num',
 		initialize: function () {
 			this.on('change', function (model) {
-				console.log(model)
+//				console.log(model)
 			});
 		}
 	});

@@ -1,15 +1,9 @@
 
 <div class="container-fluid">
 <div class="row-fluid break-line"></div>
+<%= this.renderHat() %>
 <div class="row-fluid foootbal-main-bets">
 <div class="span2 event-information">
-	<div class="row-fluid class event-hat"><img src="img/sport_1.png"><%= event_num %></div>
-	<div class="row-fluid begin text-center"><%= event.starttime %></div>
-	<div class="row-fluid competitors text-center"> <%= event.competitors.home.name %> - <%= event.competitors.away.name %> </div>
-	<div class="row-fluid score text-center match-status">
-		<div class="span6 score text-center"> <%= event_stat.score %></div>
-		<div class="span6 status text-center"><%= event.status %></div>
-	</div>
 </div>
 <div class="span2 offset2">
 	<div class="row-fluid">
@@ -83,60 +77,6 @@
 	</div>
 	<% } %>
 </div>
-</div>
-<div class="row-fluid foootbal-firsttime-bets">
-<div class="span2 event-information">
-	<div class="container-fluid match-part">
-		1 Тайм
-	</div>
-</div>
-<div class="span2 offset2">
-	<div class="row-fluid">
-		<% if (bettypes[4]) { %>
-		<div class="container-fluid bettype-wrapper <%= bettypes[4].status %>" bettype="4">
-			<div class="row-fluid bettype-caption"><%= bettypes[4].name %></div>
-			<div class="container-fluid markets">
-				<%= this.renderMarket(bettypes[4].markets, 3) %>
-			</div>
-		</div>
-		<% } %>
-	</div>
-	<div class="row-fluid double">
-	</div>
-</div>
-<div class="span2 fora">
-</div>
-<div class="span2 totyl">
-</div>
-<div class="span2">
-	<% if (bettypes[143]) { %>
-	<div class="container-fluid bettype-wrapper <%= bettypes[143].status %>" bettype="143">
-		<div class="row-fluid bettype-caption"><%= bettypes[143].name %></div>
-		<div class="container-fluid markets">
-			<%= this.renderMarket(bettypes[143].markets, 2) %>
-		</div>
-	</div>
-	<% } %>
-</div>
-<div class="span1">
-	<% if (bettypes[144]) { %>
-	<div class="container-fluid bettype-wrapper <%= bettypes[144].status %>" bettype="144">
-		<div class="row-fluid bettype-caption"><%= bettypes[144].name %></div>
-		<div class="container-fluid markets">
-			<%= this.renderMarket(bettypes[144].markets, 1) %>
-		</div>
-	</div>
-	<% } %>
-</div>
-<div class="span1">
-	<% if (bettypes[145]) { %>
-	<div class="container-fluid bettype-wrapper <%= bettypes[145].status %>" bettype="145">
-		<div class="row-fluid bettype-caption"><%= bettypes[145].name %></div>
-		<div class="container-fluid markets">
-			<%= this.renderMarket(bettypes[145].markets, 1) %>
-		</div>
-	</div>
-	<% } %>
-</div>
+	<%= this.renderTimeBets(event.status_code) %>
 </div>
 </div>

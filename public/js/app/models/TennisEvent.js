@@ -8,7 +8,7 @@
 define(['models/Event'], function (Event) {
 	var TennisEvent = Event.extend({
 		initialize: function () {
-			console.log('tennis event');
+//			console.log('tennis event');
 		}
 	});
 	return TennisEvent;
