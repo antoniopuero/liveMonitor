@@ -1,16 +1,15 @@
 /**
  * Created with JetBrains PhpStorm.
  * User: a.savchenko
- * Date: 22.10.13
- * Time: 10:13
+ * Date: 28.10.13
+ * Time: 9:34
  * To change this template use File | Settings | File Templates.
  */
 define(['models/Event'], function (Event) {
-	var Events = Backbone.Collection.extend({
-		model: Event,
+	var TennisEvent = Event.extend({
 		initialize: function () {
-//			console.log('first render');
+//			console.log('tennis event');
 		}
 	});
-	return Events;
+	return TennisEvent;
 });

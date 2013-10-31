@@ -13,6 +13,7 @@ require.config({
 		jquery: 'components/jquery/jquery',
 		underscore: 'components/underscore/underscore',
 		backbone: 'components/backbone/backbone',
+		mationette: 'components/marionette/backbone.marionette',
 		comet: 'components/cometd/cometd',
 		cometJquery: 'components/cometd/jquery.cometd',
 		cometController: 'components/cometd/cometd_controller',
@@ -22,7 +23,7 @@ require.config({
 		stage: 'app/stage',
 		models: 'app/models',
 		collections: 'app/collections',
-		views: 'app/views/views',
+		views: 'app/views',
 		templates: 'app/views/templates/pre_templates'
 	},
 	shim: {
@@ -43,7 +44,7 @@ require.config({
 			exports: 'Backbone'
 		},
 		marionette: {
-			deps: ['backbone', 'json']
+			deps: ['jquery', 'backbone', 'json']
 		},
 		jsonp: {
 			deps: ['jquery']
@@ -59,10 +60,17 @@ require.config({
 
 });
 require(['app', 'backbone', 'cometController'], function (AppView, Backbone, transport) {
+
+	Backbone.Model.prototype._super = function(funcName){
+		return this.constructor.prototype[funcName].apply(this, _.rest(arguments));
+	}
 	window.App = _.extend((window.App || {}), {
 		Vent: _.extend({}, Backbone.Events),
-		cond: {}
+		cond: {
+			eventCollection: {}
+		},
+		templates: {}
 	});
-	transport.init();
 	new AppView();
+	transport.init();
 });
