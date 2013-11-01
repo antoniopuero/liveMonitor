@@ -1,11 +1,13 @@
 
 <div class="container-fluid">
+	<%= this.renderHat() %>
 <div class="row-fluid tennis-main-bets">
 <div class="span2 event-information">
 </div>
 <div class="span2 offset2">
 	<div class="row-fluid">
 		<% if (bettypes[2]) { %>
+		<% console.log(this, bettypes) %>
 		<div class="container-fluid bettype-wrapper" bettype="2">
 			<div class="row-fluid bettype-caption"><%= bettypes[2].name %></div>
 			<div class="container-fluid markets">

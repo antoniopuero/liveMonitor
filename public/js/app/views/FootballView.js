@@ -16,11 +16,12 @@ define(['templates', 'views/singleView', 'views/collectionView'], function (temp
 			return templates.footballHatTemplate(this.model.attributes);
 		},
 		renderTimeBets: function (statusCode) {
+            var self = this;
 			console.log(statusCode);
 			if (statusCode == 1) {
-				return templates.firstTimeTemplate(this.model.attributes);
+				return templates.firstTimeTemplate({model: this.model.attributes, self: self});
 			} else if (statusCode == 2) {
-				return templates.secondTimeTemplate(this.model.attributes);
+				return templates.secondTimeTemplate({model: this.model.attributes, self: self});
 			}
 		}
 	});

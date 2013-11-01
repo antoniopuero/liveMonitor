@@ -12,16 +12,17 @@ define(['templates', 'views/singleView', 'views/collectionView'], function (temp
 		initialize: function () {
 		},
 		renderHat: function () {
-			return templates.setTemplate(this.model.attributes);
+			var self = this;
+			return templates.tennisHatTemplate({model: this.model.attributes, self: self});
 		},
 		renderScore: function (status) {
-			var templateEngine;
 			if (status == "not_started") {
 				templateEngine = templates.beforeScpreTemplate;
 			} else {
 				templateEngine = templates.tennisScoreTemplate;
 			}
-			return templateEngine(this.model.attributes);
+//			return templateEngine(this.model.attributes);
+			return '<div></div>'
 		},
 		renderSetBets: function () {
 

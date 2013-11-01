@@ -2,16 +2,15 @@
 	<div class="span2 event-information">
 		<div class="container-fluid match-part">
 			1 Тайм
-			<% console.log(this) %>
 		</div>
 	</div>
 	<div class="span2 offset2">
 		<div class="row-fluid">
-			<% if (bettypes[4]) { %>
-			<div class="container-fluid bettype-wrapper <%= bettypes[4].status %>" bettype="4">
-				<div class="row-fluid bettype-caption"><%= bettypes[4].name %></div>
+			<% if (model.bettypes[4]) { %>
+			<div class="container-fluid bettype-wrapper <%= model.bettypes[4].status %>" bettype="4">
+				<div class="row-fluid bettype-caption"><%= model.bettypes[4].name %></div>
 				<div class="container-fluid markets">
-					<%= this.renderMarket(bettypes[4].markets, 3) %>
+					<%= self.renderMarket(model.bettypes[4].markets, 3) %>
 				</div>
 			</div>
 			<% } %>
@@ -24,31 +23,31 @@
 	<div class="span2 totyl">
 	</div>
 	<div class="span2">
-		<% if (bettypes[143]) { %>
-		<div class="container-fluid bettype-wrapper <%= bettypes[143].status %>" bettype="143">
-			<div class="row-fluid bettype-caption"><%= bettypes[143].name %></div>
+		<% if (model.bettypes[143]) { %>
+		<div class="container-fluid bettype-wrapper <%= model.bettypes[143].status %>" bettype="143">
+			<div class="row-fluid bettype-caption"><%= model.bettypes[143].name %></div>
 			<div class="container-fluid markets">
-				<%= this.renderMarket(bettypes[143].markets, 2) %>
+				<%= self.renderMarket(model.bettypes[143].markets, 2) %>
 			</div>
 		</div>
 		<% } %>
 	</div>
 	<div class="span1">
-		<% if (bettypes[144]) { %>
-		<div class="container-fluid bettype-wrapper <%= bettypes[144].status %>" bettype="144">
-			<div class="row-fluid bettype-caption"><%= bettypes[144].name %></div>
+		<% if (model.bettypes[144]) { %>
+		<div class="container-fluid bettype-wrapper <%= model.bettypes[144].status %>" bettype="144">
+			<div class="row-fluid bettype-caption"><%= model.bettypes[144].name %></div>
 			<div class="container-fluid markets">
-				<%= this.renderMarket(bettypes[144].markets, 1) %>
+				<%= self.renderMarket(model.bettypes[144].markets, 1) %>
 			</div>
 		</div>
 		<% } %>
 	</div>
 	<div class="span1">
-		<% if (bettypes[145]) { %>
-		<div class="container-fluid bettype-wrapper <%= bettypes[145].status %>" bettype="145">
-			<div class="row-fluid bettype-caption"><%= bettypes[145].name %></div>
+		<% if (model.bettypes[145]) { %>
+		<div class="container-fluid bettype-wrapper <%= model.bettypes[145].status %>" bettype="145">
+			<div class="row-fluid bettype-caption"><%= model.bettypes[145].name %></div>
 			<div class="container-fluid markets">
-				<%= this.renderMarket(bettypes[145].markets, 1) %>
+				<%= self.renderMarket(model.bettypes[145].markets, 1) %>
 			</div>
 		</div>
 		<% } %>

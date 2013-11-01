@@ -43,7 +43,6 @@ define(['backbone',
 				App.cond.eventCollection.tennis = new TennisCollection(App.cond.completeEvents.tennis);
 				new FootballView({collection: App.cond.eventCollection.football});
 				new TennisView({collection: App.cond.eventCollection.tennis});
-				console.log('here 3')
 			});
 			App.Vent.on('update:bets', function (data) {
 				console.log('udpate:bets', data[0]);

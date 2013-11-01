@@ -2,36 +2,39 @@ define(['stage'], function (LiveAPI) {
 	var cometController = {
 
 		init : function(){
-			var self = this,
-				address = location.search.split(':')[3],
-				id = location.search.split(':')[4];
-			if (id) {
-				_self.LiveChannelID = id;
-				_self.firstSteps();
-				return false;
-			}
-			address = address ? address : '172.16.4.1';
-			$.jsonp({
-				url: 'http://' + address + '/param/LIVE_CHANNEL',
-				callback: 'cometD_controller.setChannelId',
-				callbackParameter: 'callback',
-				error: function () {
-					//console.error("ERROR!");
-					self.firstSteps();
-				}
-			});
+//			var self = this,
+//				address = location.search.split(':')[3],
+//				id = location.search.split(':')[4];
+//			if (id) {
+//				_self.LiveChannelID = id;
+//				_self.firstSteps();
+//				return false;
+//			}
+//			address = address ? address : '172.16.4.1';
+//			$.jsonp({
+//				url: 'http://' + address + '/param/LIVE_CHANNEL',
+//				callback: 'cometD_controller.setChannelId',
+//				callbackParameter: 'callback',
+//				error: function () {
+//					//console.error("ERROR!");
+//					self.firstSteps();
+//				}
+//			});
+            cometController.firstSteps();
 		},
 
 		clientIP :  null,
 		LiveChannelID: '',
 
 		setChannelId: function (data) {
-			this.LiveChannelID = data.liveid;
+            var self = cometController;
+			self.LiveChannelID = data.liveid;
+            self.firstSteps();
 		},
 		firstSteps: function () {
 			var self = cometController;
-//			jQuery.cometd.configure({url: "https://igra.msl.ua/cometd"});
-			jQuery.cometd.configure({url: "http://10.0.0.171:8080/lbs/test/cometd"});
+			jQuery.cometd.configure({url: "https://igra.msl.ua/cometd"});
+//			jQuery.cometd.configure({url: "http://10.0.0.171:8080/lbs/test/cometd"});
 			jQuery.cometd.addListener('/meta/connect', self.connectionCallBackConnect);
 			jQuery.cometd.addListener('/service/data', self.connectionCallBackServiceData);
 			jQuery.cometd.registerExtension('lbs', self.LbsExtension());

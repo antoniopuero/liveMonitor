@@ -22,6 +22,9 @@ body {
     position: relative;
 	float: left;
 }
+.row-fluid > [class^="span"] {
+    min-height: 5px;
+}
 /*.row-fluid > [class^="span"]:last-child:after {*/
 	/*display: table;*/
 	/*clear: both;*/
