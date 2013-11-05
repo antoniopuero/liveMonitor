@@ -5,7 +5,7 @@
  * Time: 9:43
  * To change this template use File | Settings | File Templates.
  */
-define(['templates', 'views/singleView', 'views/collectionView'], function (templates, EventView, EventsView) {
+define(['templates', 'views/singleView', 'views/collectionView', 'stage'], function (templates, EventView, EventsView, LiveAPI) {
 
 	var FootballView = EventView.extend({
 		template: templates.footballTemplate,

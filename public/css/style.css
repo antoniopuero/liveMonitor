@@ -212,23 +212,19 @@ body {
 	text-align: center;
 }
 
-/*.break-line {*/
-	/*height: 4px;*/
-	/*background: #00705A;*/
-/*}*/
+.break-line {
+	height: 4px;
+	background: #00705A;
+}
 
 
-.bettype-wrapper.open {
-	display: block;
-}
-.bettype-wrapper {
-	display: none;
-}
 .market-wrapper.open {
-	display: block;
+	/*display: block;*/
+	visibility: visible;
 }
 .market-wrapper {
-	display: none;
+	/*display: none;*/
+	visibility: hidden;
 }
 .bet.open {
 	visibility: visible;

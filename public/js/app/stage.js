@@ -151,21 +151,25 @@ define(function () {
 		},
 		sortBettypes: function (aBettypes) {
 			var self = LiveAPI,
+				//these are bettypes
 				sortedMarkets = {};
 			_.each(aBettypes, function (bettypePortion) {
 				var type = bettypePortion.type;
+				//sort markets to correct bettypes
 				if ( !sortedMarkets[type] ) {
 					sortedMarkets[type] = {
 						name: self.getBettypeName(type),
-						markets: [],
+						markets: {},
 						status: 'blocked'
 					};
 				}
+				//if one of markets is open - then bettype is open too
 				bettypePortion.odds = self.sortOdds(bettypePortion.odds);
 				if (bettypePortion.status == "open") {
 					sortedMarkets[type].status = 'open';
 				}
-				sortedMarkets[type].markets.push(bettypePortion);
+				//for markets type in bettype
+				sortedMarkets[type].markets[bettypePortion.market] = bettypePortion;
 			});
 			return sortedMarkets;
 		},
@@ -179,7 +183,7 @@ define(function () {
 		startTime: function (startTime) {
 			var start = new Date(parseInt(startTime, 10) * 1000),
 				startString = '';
-			startString += start.getDate() + '.' + (start.getMonth() + 1) + ', ' + start.getHours() + ':' + start.getMinutes();
+			startString += start.getDate() + '.' + (start.getMonth() + 1) + ', ' + start.getHours() + ':' + (start.getMinutes() == 0 ? '00' : start.getMinutes());
 			return startString;
 		},
 

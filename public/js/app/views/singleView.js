@@ -5,7 +5,7 @@
  * Time: 9:45
  * To change this template use File | Settings | File Templates.
  */
-define(['templates', 'backbone'], function (templates, Backbone) {
+define(['templates', 'backbone', 'stage'], function (templates, Backbone, LiveAPI) {
 
 
 	var EventView = Backbone.View.extend({
