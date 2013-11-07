@@ -9,15 +9,12 @@ define(['templates', 'views/singleView', 'views/collectionView', 'stage'], funct
 
 	var FootballView = EventView.extend({
 		template: templates.footballTemplate,
-		initialize: function () {
-//			console.log('render football')
-		},
 		renderHat: function () {
 			return templates.footballHatTemplate(this.model.attributes);
 		},
 		renderTimeBets: function (statusCode) {
             var self = this;
-			console.log(statusCode);
+//			console.log(statusCode);
 			if (statusCode == 1) {
 				return templates.firstTimeTemplate({model: this.model.attributes, self: self});
 			} else if (statusCode == 2) {

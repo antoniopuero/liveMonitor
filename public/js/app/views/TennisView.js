@@ -9,8 +9,6 @@ define(['templates', 'views/singleView', 'views/collectionView'], function (temp
 
 	var TennisView = EventView.extend({
 		template: templates.tennisTemplate,
-		initialize: function () {
-		},
 		renderHat: function () {
 			var self = this;
 			return templates.tennisHatTemplate({model: this.model.attributes, self: self});

@@ -9,9 +9,6 @@ define(['backbone'], function (Backbone) {
 	var Event = Backbone.Model.extend({
 		idAttribute: 'event_num',
 		initialize: function () {
-			this.on('change', function (model) {
-//				console.log(model)
-			});
 		}
 	});
 	return Event;

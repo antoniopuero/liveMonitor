@@ -69,7 +69,8 @@ require(['app', 'backbone', 'cometController'], function (AppView, Backbone, tra
 		cond: {
 			eventCollection: {}
 		},
-		templates: {}
+		templates: {},
+		afterInit: false
 	});
 	new AppView();
 	transport.init();

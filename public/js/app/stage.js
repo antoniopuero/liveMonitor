@@ -7,7 +7,18 @@
  */
 define(function () {
 	var LiveAPI = {
-		resizeFonts: function (blockGroup, maxSize, minSize) {
+	availableSports: {
+		1: 'football',
+		3: 'tennis'
+	},
+	/**
+	 * resizeFonts used for a responsive design of monitors
+	 * @param {array} blockGroup - jQuery object which provide elements of one group for resizing font
+	 * @param {number} maxSize - the limitation of maximum size of font in block group
+	 * @param {number} minSize - the limitation of minimum size of font in block group
+	 * @return {number} maxSize - max size of font for non-breaking elements in group
+	 */
+		resizeFonts: function (blockGroup, maxSize, minSize, doubleWidth) {
 			var fontWidthCof = 1.3,
 				minBlockWidth = Infinity,
 				maxTextLength = 0,
@@ -26,6 +37,10 @@ define(function () {
 				}
 			});
 			tempCof = Math.floor(fontWidthCof * minBlockWidth / maxTextLength);
+
+			if (doubleWidth !== undefined) {
+				tempCof *= 2;
+			}
 			if ( tempCof < minSize ) {
 				maxSize = minSize;
 			} else if ( tempCof > maxSize ) {
@@ -33,17 +48,26 @@ define(function () {
 			} else {
 				maxSize = tempCof;
 			}
-			return maxSize + 1;
+			return maxSize;
 		},
 
+		/**
+		 * useResizedFonts - decorator function for resizeFonts
+		 * @param {object} selectors - object, where key is selector string and value is an array [minSize, maxSize]
+		 * @param {array} styleContainer - jQuery object of style tag, which will contain style rules for font sizes
+		 */
 		useResizedFonts: function (selectors, styleContainer) {
 			var style = '';
 			_.each(selectors, function (sizes, selector) {
-				style += selector + ' {font-size:' + LiveAPI.resizeFonts($(selector), sizes[1], sizes[0]) + 'px; }\n';
+				style += selector + ' {font-size:' + LiveAPI.resizeFonts($(selector), sizes[1], sizes[0], sizes[2]) + 'px; }\n';
 			});
 			styleContainer.text(style);
 		},
 
+		/**
+		 * setColumn - function for initial adding a column-count rule, based on parameter in location.search string after ':' character
+		 * @param {array} el - jQuery object of el, for which will be applied styles
+		 */
 		setColumns: function (el) {
 			var cloumnCount = location.search.split(':')[1];
 			el.css({
@@ -52,6 +76,11 @@ define(function () {
 			});
 		},
 
+		/** converts array into object
+		 * @param {array} array - array of objects which will be convert into object
+		 * @param {string} param - key in object, value of which will be a new key in returned object
+		 * @return {object} resultObj - new object of objects
+		 */
 		convertArrayIntoObject: function (array, param) {
 			var resultObj = {};
 			_.each(array, function (value) {
@@ -61,6 +90,11 @@ define(function () {
 			return resultObj;
 		},
 
+		/**
+		 * @param {array} array - array of objects which will be convert into object
+		 * @param {string} param - key in object, value of which will be a new key in returned object
+		 * @return {object} resultObj - new object of objects
+		 */
 		checkCompleteEvents: function (condObj) {
 			var self = LiveAPI,
 				completeEvents = {
@@ -113,9 +147,9 @@ define(function () {
 				ev_num = portion['event_num'];
 			names.splice(i, 1);
 			if ( _.some(condObj.completeEvents, function (eventObject) {
-				return ev_num === eventObject[event_num];
+				return ev_num === eventObject['event_num'];
 			}) ) {
-				return isFull //true
+				return isFull; //true
 			} else {
 				_.each(names, function (name) {
 					if ( !condObj[name][ev_num] ) {
@@ -153,6 +187,9 @@ define(function () {
 			var self = LiveAPI,
 				//these are bettypes
 				sortedMarkets = {};
+			if (!aBettypes) {
+				return false;
+			}
 			_.each(aBettypes, function (bettypePortion) {
 				var type = bettypePortion.type;
 				//sort markets to correct bettypes
@@ -174,17 +211,13 @@ define(function () {
 			return sortedMarkets;
 		},
 		sortOdds: function (aOdds) {
-			var self = LiveAPI;
+			var self = LiveAPI,
+				oOdds = {};
 			_.each(aOdds, function (odd) {
 				odd.outcome = self.getOutcomeName(odd.outcome_code);
+				oOdds[odd.code] = odd;
 			});
-			return aOdds;
-		},
-		startTime: function (startTime) {
-			var start = new Date(parseInt(startTime, 10) * 1000),
-				startString = '';
-			startString += start.getDate() + '.' + (start.getMonth() + 1) + ', ' + start.getHours() + ':' + (start.getMinutes() == 0 ? '00' : start.getMinutes());
-			return startString;
+			return oOdds;
 		},
 
 		getStatusFromDictionary: function (code) {
@@ -207,6 +240,13 @@ define(function () {
 			return LiveAPI.getFromDictionary(code, 'bettype');
 		},
 
+		startTime: function (startTime) {
+			var start = new Date(parseInt(startTime, 10) * 1000),
+				startString = '';
+			startString += start.getDate() + '.' + (start.getMonth() + 1) + ', ' + start.getHours() + ':' + (start.getMinutes() < 10 ? '0' + start.getMinutes() : start.getMinutes());
+			return startString;
+		},
+
 		timeToStart: function (startTime) {
 			var start = new Date(parseInt(startTime, 10) * 1000),
 				now = new Date(),
@@ -225,6 +265,85 @@ define(function () {
 				timeToStartString += tempTime + "хв";
 			}
 			return timeToStartString;
+		},
+		updateRouter: function (data, dataType, updateMethod) {
+			var sportType = LiveAPI.availableSports[data.category_code],
+				eventModel;
+
+			if (!sportType) {
+				_.each(App.cond.eventCollection, function (sportCollection) {
+					eventModel = sportCollection.get(data.event_num);
+					if (eventModel) {
+						return false;
+					}
+				});
+			} else {
+				eventModel = App.cond.eventCollection[sportType].get(data.event_num);
+			}
+
+			if (eventModel) {
+				updateMethod(eventModel, data);
+			} else {
+				App.cond[dataType][data.event_num] = data;
+				if (LiveAPI.checkFullEvent(App.cond, data, dataType) && App.afterInit) {
+					//console.log('now is full and initialize'); @TODO
+				}
+			}
+		},
+		updateEvent: function (eventModel, updatedEvent) {
+			var event = eventModel.get('event');
+			event.betstatus = updatedEvent.betstatus;
+			event.status = LiveAPI.getStatusFromDictionary(updatedEvent.status_code);
+			eventModel.set({event: event});
+
+		},
+		updateEventStat: function (eventModel,updatedEventStat) {
+			eventModel.set({event_stat: updatedEventStat});
+		},
+		updateBettypes: function (eventModel, updatedBettypes) {
+			console.log(updatedBettypes);
+			var bettypes = eventModel.get('bettypes'),
+				newBettypes = LiveAPI.sortBettypes(updatedBettypes.data),
+				temp;
+			if (!newBettypes) {
+				return false;
+			}
+			console.log(bettypes, newBettypes);
+			_.each(newBettypes, function (bettype, type) {
+				if (bettypes[type]) {
+					console.log('updateing existing bettype');
+
+					bettypes[type].status = newBettypes[type].status;
+
+					temp = bettypes[type].markets;
+					console.log(temp, bettypes[type]);
+
+					_.each(newBettypes[type].markets, function (market, marketCode) {
+
+						if (temp[marketCode]) {
+							console.log('updateing existing market');
+							console.log(market, marketCode);
+
+							temp[marketCode].status = newBettypes[type].markets[marketCode].status;
+
+							temp = temp[marketCode].odds;
+							console.log(temp, newBettypes[type].markets[marketCode].odds)
+							_.each(newBettypes[type].markets[marketCode].odds, function (odd, oddCode) {
+								console.log('updateing odd');
+								temp[oddCode] = odd;
+							});
+
+						} else {
+
+							temp[marketCode] = market;
+						}
+					});
+				} else {
+					bettypes[type] = bettype;
+				}
+			});
+
+			eventModel.set({bettypes: bettypes});
 		}
 	};
 	return LiveAPI;

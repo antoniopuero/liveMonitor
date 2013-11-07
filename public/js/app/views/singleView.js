@@ -10,6 +10,9 @@ define(['templates', 'backbone', 'stage'], function (templates, Backbone, LiveAP
 
 	var EventView = Backbone.View.extend({
 		className: 'event-wrapper',
+		initialize: function () {
+			this.model.on('change', this.render, this);
+		},
 		render: function () {
 			this.$el.html(this.template(this.model.attributes));
 			return this;

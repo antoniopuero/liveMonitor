@@ -24,7 +24,7 @@ define(['stage'], function (LiveAPI) {
 		},
 
 		clientIP :  null,
-		LiveChannelID: '',
+		LiveChannelID: '6',
 
 		setChannelId: function (data) {
             var self = cometController;
@@ -159,13 +159,13 @@ define(['stage'], function (LiveAPI) {
 				information = data.data,
 				correlation = {
 					bettypes: function (information) {
-						App.Vent.trigger('update:bets', information);
+						App.Vent.trigger('update:bets', information[0]);
 					},
 					event: function (information) {
-						App.Vent.trigger('update:event', information);
+						App.Vent.trigger('update:event', information[0]);
 					},
 					event_stat: function (information) {
-						App.Vent.trigger('update:stat', information);
+						App.Vent.trigger('update:stat', information[0]);
 					},
 					dictionary: function (information) {
 						App.Vent.trigger('update:dictionary', information);

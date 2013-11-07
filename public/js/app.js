@@ -28,14 +28,20 @@ define(['backbone',
 					AppView.cond.push(dict[0].data);
 				}
 			});
+
+
 			/*update event*/
 			App.Vent.on('update:event', function (data) {
-				console.log('udpate:event', data[0]);
+				LiveAPI.updateRouter(data, 'event', LiveAPI.updateEvent);
 			});
+
+
 			/*update event stat*/
 			App.Vent.on('update:stat', function (data) {
-				console.log('udpate:stat', data[0]);
+				LiveAPI.updateRouter(data, 'event_stat', LiveAPI.updateEventStat);
 			});
+
+
 			/*bets*/
 			App.Vent.once('init:bets', function () {
 				App.cond.completeEvents = LiveAPI.checkCompleteEvents(App.cond);
@@ -43,16 +49,20 @@ define(['backbone',
 				App.cond.eventCollection.tennis = new TennisCollection(App.cond.completeEvents.tennis);
 				new FootballView({collection: App.cond.eventCollection.football});
 				new TennisView({collection: App.cond.eventCollection.tennis});
+				App.afterInit = true;
 			});
 			App.Vent.on('update:bets', function (data) {
-				console.log('udpate:bets', data[0]);
+				console.log(data);
+				LiveAPI.updateRouter(data, 'bettypes', LiveAPI.updateBettypes);
 			});
+
+
 		},
 		resize: function () {
 			var styleElement = $('#computed-style');
 			LiveAPI.useResizedFonts({
 				'.event-hat': [16, 20],
-				'.competitors': [16, 35],
+				'.competitors': [18, 40, 'doubleWidth'],
 				'.begin': [12, 20],
 				'.score': [16, 25],
 				'.status': [12, 20],
