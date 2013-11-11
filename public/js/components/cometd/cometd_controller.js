@@ -33,8 +33,8 @@ define(['stage'], function (LiveAPI) {
 		},
 		firstSteps: function () {
 			var self = cometController;
-			jQuery.cometd.configure({url: "https://igra.msl.ua/cometd"});
-//			jQuery.cometd.configure({url: "http://10.0.0.171:8080/lbs/test/cometd"});
+//			jQuery.cometd.configure({url: "https://igra.msl.ua/cometd"});
+			jQuery.cometd.configure({url: "http://10.0.0.171:8080/lbs/test/cometd"});
 			jQuery.cometd.addListener('/meta/connect', self.connectionCallBackConnect);
 			jQuery.cometd.addListener('/service/data', self.connectionCallBackServiceData);
 			jQuery.cometd.registerExtension('lbs', self.LbsExtension());

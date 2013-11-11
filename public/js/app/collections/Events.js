@@ -9,7 +9,6 @@ define(['models/Event'], function (Event) {
 	var Events = Backbone.Collection.extend({
 		model: Event,
 		initialize: function () {
-//			console.log('first render');
 		},
 		comparator: function (model) {
 			return parseInt(model.get('event').start_time);

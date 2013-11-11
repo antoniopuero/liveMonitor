@@ -1,55 +1,137 @@
+<div class="row-fluid break-line"></div>
 <div class="row-fluid foootbal-firsttime-bets">
 	<div class="span2 event-information">
 		<div class="container-fluid match-part">
 			1 Тайм
 		</div>
 	</div>
-	<div class="span2 offset2">
+	<div class="span2 height-template">
 		<div class="row-fluid">
-			<% if (model.bettypes[4]) { %>
-			<div class="container-fluid bettype-wrapper <%= model.bettypes[4].status %>" bettype="4">
-				<div class="row-fluid bettype-caption"><%= model.bettypes[4].name %></div>
+			<div class="container-fluid bettype-wrapper">
 				<div class="container-fluid markets">
-					<%= self.renderMarket(model.bettypes[4].markets, 3) %>
+					<div class="row-fluid market-wrapper empty">
+						<div class="span12 bet">
+							<div class="container-fluid">
+								<div class="row-fluid  outcome">empty</div>
+								<div class="row-fluid odd">
+									<div class="span4 castcode">1</div>
+									<div class="span8 coef">0</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row-fluid market-wrapper empty">
+						<div class="span12 bet">
+							<div class="container-fluid">
+								<div class="row-fluid  outcome">empty</div>
+								<div class="row-fluid odd">
+									<div class="span4 castcode">1</div>
+									<div class="span8 coef">0</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row-fluid market-wrapper empty">
+						<div class="span12 bet">
+							<div class="container-fluid">
+								<div class="row-fluid  outcome">empty</div>
+								<div class="row-fluid odd">
+									<div class="span4 castcode">1</div>
+									<div class="span8 coef">0</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row-fluid market-wrapper empty">
+						<div class="span12 bet">
+							<div class="container-fluid">
+								<div class="row-fluid  outcome">empty</div>
+								<div class="row-fluid odd">
+									<div class="span4 castcode">1</div>
+									<div class="span8 coef">0</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row-fluid market-wrapper empty">
+						<div class="span12 bet">
+							<div class="container-fluid">
+								<div class="row-fluid  outcome">empty</div>
+								<div class="row-fluid odd">
+									<div class="span4 castcode">1</div>
+									<div class="span8 coef">0</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<% } %>
-		</div>
-		<div class="row-fluid double">
 		</div>
 	</div>
-	<div class="span2 fora">
-	</div>
-	<div class="span2 totyl">
-	</div>
-	<div class="span2">
-		<% if (model.bettypes[143]) { %>
-		<div class="container-fluid bettype-wrapper <%= model.bettypes[143].status %>" bettype="143">
-			<div class="row-fluid bettype-caption"><%= model.bettypes[143].name %></div>
-			<div class="container-fluid markets">
-				<%= self.renderMarket(model.bettypes[143].markets, 2) %>
+	<div class="span10">
+		<div class="row-fluid">
+			<div class="span2andhalf ">
+				<div class="row-fluid">
+					<div class="container-fluid bettype-wrapper" bettype="4">
+						<div class="row-fluid bettype-caption">Пісумок першого тайму</div>
+						<div class="container-fluid markets">
+							<% if (model.bettypes[4]) { %>
+							<%= self.renderMarket(model.bettypes[4].markets, 3) %>
+							<% } else { %>
+							<%= self.renderEmptyMarket() %>
+							<% } %>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="span2andhalf">
+				<div class="container-fluid bettype-wrapper" bettype="143">
+					<div class="row-fluid bettype-caption">Кільк. голів 1-му таймі</div>
+					<div class="container-fluid markets">
+						<% if (model.bettypes[143]) { %>
+						<%= self.renderMarket(model.bettypes[143].markets, 2) %>
+						<% } else { %>
+						<%= self.renderEmptyMarket() %>
+						<% } %>
+					</div>
+				</div>
+			</div>
+			<div class="span1">
+				<div class="container-fluid bettype-wrapper" bettype="144">
+					<div class="row-fluid bettype-caption">Кільк. голів 1к 1т</div>
+					<div class="container-fluid markets">
+						<% if (model.bettypes[144]) { %>
+						<%= self.renderMarket(model.bettypes[144].markets, 1) %>
+						<% } else { %>
+						<%= self.renderEmptyMarket() %>
+						<% } %>
+					</div>
+				</div>
+			</div>
+			<div class="span1">
+				<div class="container-fluid bettype-wrapper" bettype="145">
+					<div class="row-fluid bettype-caption">Кільк. голів 2к 1т</div>
+					<div class="container-fluid markets">
+						<% if (model.bettypes[145]) { %>
+						<%= self.renderMarket(model.bettypes[145].markets, 1) %>
+						<% } else { %>
+						<%= self.renderEmptyMarket() %>
+						<% } %>
+					</div>
+				</div>
+			</div>
+			<div class="span5">
+				<div class="container-fluid bettype-wrapper" bettype="145">
+					<div class="row-fluid bettype-caption">Точний рахунок 1-го тайму</div>
+					<div class="container-fluid markets">
+						<% if (model.bettypes[112]) { %>
+						<%= self.renderMarket(model.bettypes[112].markets, 3) %>
+						<% } else { %>
+						<%= self.renderEmptyMarket() %>
+						<% } %>
+					</div>
+				</div>
 			</div>
 		</div>
-		<% } %>
-	</div>
-	<div class="span1">
-		<% if (model.bettypes[144]) { %>
-		<div class="container-fluid bettype-wrapper <%= model.bettypes[144].status %>" bettype="144">
-			<div class="row-fluid bettype-caption"><%= model.bettypes[144].name %></div>
-			<div class="container-fluid markets">
-				<%= self.renderMarket(model.bettypes[144].markets, 1) %>
-			</div>
-		</div>
-		<% } %>
-	</div>
-	<div class="span1">
-		<% if (model.bettypes[145]) { %>
-		<div class="container-fluid bettype-wrapper <%= model.bettypes[145].status %>" bettype="145">
-			<div class="row-fluid bettype-caption"><%= model.bettypes[145].name %></div>
-			<div class="container-fluid markets">
-				<%= self.renderMarket(model.bettypes[145].markets, 1) %>
-			</div>
-		</div>
-		<% } %>
 	</div>
 </div>

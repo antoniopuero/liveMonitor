@@ -22,12 +22,8 @@ body {
     position: relative;
 	float: left;
 }
-.row-fluid > [class^="span"] {
-    min-height: 5px;
-}
-/*.row-fluid > [class^="span"]:last-child:after {*/
-	/*display: table;*/
-	/*clear: both;*/
+/*.row-fluid > [class^="span"] {*/
+    /*min-height: 5px;*/
 /*}*/
 .row-fluid {
 	width: 100%;
@@ -74,11 +70,14 @@ body {
 .span3 {
 	width: 25%;
 }
+.span2andhalf {
+	width: 20.833%;
+}
 .span2 {
-	width:16.66%;
+	width: 16.66%;
 }
 .span1half { /* 1.5 */
-	width:12.5%;
+	width: 12.5%;
 }
 .span1 {
 	width: 8.33%;
@@ -149,8 +148,8 @@ body {
 }
 
 .bettype-wrapper {
-	box-shadow: inset 1px 0px 12px rgba(0, 0, 0, 0.3), inset 3px 3px 3px rgba(255, 255, 255, 0.1), inset -3px 0px 3px rgba(0, 0, 0, 0.3), inset -7px -17px 15px rgba(255, 255, 255, 0.1) ;
-
+	/*box-shadow: inset 1px 0px 5px rgba(0, 0, 0, 0.3), inset 3px 3px 3px rgba(255, 255, 255, 0.1), inset -3px 0px 3px rgba(0, 0, 0, 0.3), inset -7px -17px 5px rgba(255, 255, 255, 0.1) ;*/
+	outline: 1px solid #55915F;
 }
 
 .bettype-caption {
@@ -165,6 +164,12 @@ body {
 .odd {
 	background: rgb(63, 105, 63);
 	box-shadow: inset 1px 0px 12px rgba(0, 0, 0, 0.3), inset 3px 3px 3px rgba(255, 255, 255, 0.1), inset -3px 0px 3px rgba(0, 0, 0, 0.3), inset -7px -17px 15px rgba(255, 255, 255, 0.1) ;
+}
+.odd.up {
+	background: red;
+}
+.odd.down {
+	background: rgb(31, 255, 31);
 }
 .odd:last-child {
 }
@@ -184,6 +189,7 @@ body {
 }
 .span2.event-information {
 	position: absolute;
+	z-index: 2;
 	top: 0;
 	bottom: 0;
 	background: #97f6c0;
@@ -205,9 +211,8 @@ body {
 .event-information .score {
 }
 .event-information .match-part {
-	margin-top: 30%;
 	font-size: 40px;
-	color: #717948;
+	color: #79780d;
 	box-shadow: none;
 	text-align: center;
 }
@@ -232,10 +237,23 @@ body {
 .bet {
 	visibility: hidden;
 }
-
-
-
-
+.event-wrapper > .container-fluid.stopped > .row-fluid:nth-child(n + 3) { /* .event-information is first and .height-template block is the second, they must be visible*/
+	visibility: hidden;
+}
+.setscore {
+	background: whitesmoke;
+	color: #000000;
+	font-weight: bold;
+	box-shadow: none;
+}
+.setscore .score {
+	background: #ffff00;
+}
+ .setscore .game-score {
+	background: saddlebrown;
+	 color: #f8f8ff;
+	 float: right;
+}
 
 
 

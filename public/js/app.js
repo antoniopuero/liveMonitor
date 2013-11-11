@@ -25,24 +25,22 @@ define(['backbone',
 			});
 			App.Vent.on('update:dictionary', function (dict) {
 				if (dict[0].data) {
-					AppView.cond.push(dict[0].data);
+					AppView.cond.dictinary.push(dict[0].data);
 				}
 			});
 
-
-			/*update event*/
+			/*updates*/
 			App.Vent.on('update:event', function (data) {
 				LiveAPI.updateRouter(data, 'event', LiveAPI.updateEvent);
 			});
-
-
-			/*update event stat*/
 			App.Vent.on('update:stat', function (data) {
 				LiveAPI.updateRouter(data, 'event_stat', LiveAPI.updateEventStat);
 			});
+			App.Vent.on('update:bets', function (data) {
+				LiveAPI.updateRouter(data, 'bettypes', LiveAPI.updateBettypes);
+			});
 
-
-			/*bets*/
+			/*init bets*/
 			App.Vent.once('init:bets', function () {
 				App.cond.completeEvents = LiveAPI.checkCompleteEvents(App.cond);
 				App.cond.eventCollection.football = new FootballCollection(App.cond.completeEvents.football);
@@ -51,11 +49,6 @@ define(['backbone',
 				new TennisView({collection: App.cond.eventCollection.tennis});
 				App.afterInit = true;
 			});
-			App.Vent.on('update:bets', function (data) {
-				console.log(data);
-				LiveAPI.updateRouter(data, 'bettypes', LiveAPI.updateBettypes);
-			});
-
 
 		},
 		resize: function () {
@@ -66,10 +59,12 @@ define(['backbone',
 				'.begin': [12, 20],
 				'.score': [16, 25],
 				'.status': [12, 20],
+				'.to-start': [12, 20],
 				'.bettype-caption': [12, 25],
 				'.outcome': [10, 20],
 				'.castcode': [10, 20],
-				'.coef': [10,20]
+				'.coef': [10,20],
+				'.setscore .row-fluid .row-fluid': [16, 20]
 			}, styleElement);
 		}
 	});

@@ -191,7 +191,8 @@ define(function () {
 				return false;
 			}
 			_.each(aBettypes, function (bettypePortion) {
-				var type = bettypePortion.type;
+				var type = bettypePortion.type,
+					result;
 				//sort markets to correct bettypes
 				if ( !sortedMarkets[type] ) {
 					sortedMarkets[type] = {
@@ -201,23 +202,42 @@ define(function () {
 					};
 				}
 				//if one of markets is open - then bettype is open too
-				bettypePortion.odds = self.sortOdds(bettypePortion.odds);
+				result = self.sortOdds(bettypePortion.odds);
+				//value of market (hardcode)
+				bettypePortion.value = result.value;
+				//oddds of market
+				bettypePortion.odds = result.odds;
 				if (bettypePortion.status == "open") {
 					sortedMarkets[type].status = 'open';
 				}
 				//for markets type in bettype
 				sortedMarkets[type].markets[bettypePortion.market] = bettypePortion;
 			});
+			//sort markets by value
+			_.each(sortedMarkets, function (bettype) {
+				bettype.markets = _.sortBy(bettype.markets, function (market) {
+					return market.value;
+				});
+			});
+
 			return sortedMarkets;
 		},
 		sortOdds: function (aOdds) {
 			var self = LiveAPI,
-				oOdds = {};
+				oOdds = {},
+				value = '',
+				result = {};
 			_.each(aOdds, function (odd) {
+				odd.change = '';
 				odd.outcome = self.getOutcomeName(odd.outcome_code);
 				oOdds[odd.code] = odd;
+				value = odd.values.join('');
 			});
-			return oOdds;
+			if (value) {
+				result.value = parseFloat(value);
+			}
+			result.odds = oOdds;
+			return result; // {odds: '...', value: '...'}
 		},
 
 		getStatusFromDictionary: function (code) {
@@ -251,14 +271,17 @@ define(function () {
 			var start = new Date(parseInt(startTime, 10) * 1000),
 				now = new Date(),
 				tempTime,
-				timeToStartString = '';
+				timeToStartString = 'До початку: ';
+			if (start - now < 0) {
+				return '';
+			}
 			tempTime = start.getDate() - now.getDate();
 			if ( tempTime > 0 ) {
-				timeToStartString += tempTime + "д";
+				timeToStartString += tempTime + "д ";
 			}
 			tempTime = start.getHours() - now.getHours();
 			if ( tempTime > 0 ) {
-				timeToStartString += tempTime + "г";
+				timeToStartString += tempTime + "г ";
 			}
 			tempTime = start.getMinutes() - now.getMinutes();
 			if ( tempTime > 0 ) {
@@ -284,66 +307,116 @@ define(function () {
 			if (eventModel) {
 				updateMethod(eventModel, data);
 			} else {
-				App.cond[dataType][data.event_num] = data;
+
+				if (dataType === 'bettypes') {
+					App.cond[dataType][data.event_num] = LiveAPI.addNewBettypes(App.cond[dataType][data.event_num], data);
+				} else {
+					App.cond[dataType][data.event_num] = data;
+				}
+
 				if (LiveAPI.checkFullEvent(App.cond, data, dataType) && App.afterInit) {
-					//console.log('now is full and initialize'); @TODO
+					sportType = sportType ? sportType : LiveAPI.availableSports[App.cond.event[data.event_num].category_code];
+					App.cond.eventCollection[sportType].add(LiveAPI.compileEvent(data.event_num, App.cond.event[data.event_num], App.cond.bettypes[data.event_num], App.cond.event_stat[data.event_num]));
 				}
 			}
 		},
 		updateEvent: function (eventModel, updatedEvent) {
 			var event = eventModel.get('event');
 			event.betstatus = updatedEvent.betstatus;
+			if (_.indexOf(['closed', 'removed'], updatedEvent.status) !== -1) {
+				setTimeout(function () {
+					eventModel.collection.remove(eventModel.get('event_num'));
+				}, 5 * 60 * 1000);
+			}
 			event.status = LiveAPI.getStatusFromDictionary(updatedEvent.status_code);
 			eventModel.set({event: event});
-
 		},
 		updateEventStat: function (eventModel,updatedEventStat) {
 			eventModel.set({event_stat: updatedEventStat});
 		},
-		updateBettypes: function (eventModel, updatedBettypes) {
-			console.log(updatedBettypes);
-			var bettypes = eventModel.get('bettypes'),
-				newBettypes = LiveAPI.sortBettypes(updatedBettypes.data),
+		addNewBettypes: function (bettypes, updatedBettypes) {
+			var newBettypes = LiveAPI.sortBettypes(updatedBettypes.data),
 				temp;
 			if (!newBettypes) {
 				return false;
 			}
-			console.log(bettypes, newBettypes);
 			_.each(newBettypes, function (bettype, type) {
 				if (bettypes[type]) {
-					console.log('updateing existing bettype');
+
 
 					bettypes[type].status = newBettypes[type].status;
-
 					temp = bettypes[type].markets;
-					console.log(temp, bettypes[type]);
-
 					_.each(newBettypes[type].markets, function (market, marketCode) {
-
+						var marketStatus = '';
 						if (temp[marketCode]) {
-							console.log('updateing existing market');
-							console.log(market, marketCode);
 
-							temp[marketCode].status = newBettypes[type].markets[marketCode].status;
+							console.log('existing market');
 
-							temp = temp[marketCode].odds;
-							console.log(temp, newBettypes[type].markets[marketCode].odds)
-							_.each(newBettypes[type].markets[marketCode].odds, function (odd, oddCode) {
-								console.log('updateing odd');
-								temp[oddCode] = odd;
-							});
+							marketStatus = newBettypes[type].markets[marketCode].status;
+							if (_.indexOf(['closed', 'removed'], marketStatus) !== -1) {
+								delete temp[marketCode];
+							} else {
+								temp[marketCode].status = marketStatus;
+								temp = temp[marketCode].odds;
+								_.each(newBettypes[type].markets[marketCode].odds, function (odd, oddCode) {
+									var oddStatus = odd.status,
+										oldCoef, newCoef;
+									if (temp[oddCode]) {
 
-						} else {
+										console.log('existing odd');
 
+										if (_.indexOf(['closed', 'removed'], oddStatus) !== -1) {
+											delete temp[oddCode];
+										} else {
+											console.log(temp[oddCode], odd)
+											oldCoef = parseFloat(temp[oddCode].coef);
+											newCoef = parseFloat(odd.coef);
+											if (newCoef > oldCoef) {
+												odd.change = 'up';
+											} else if (oldCoef > newCoef) {
+												odd.change = 'down';
+											} else {
+												odd.change = '';
+											}
+											temp[oddCode] = odd;
+
+											console.log(temp[oddCode]);
+										}
+									} else if (_.indexOf(['closed', 'removed'], odd.status) === -1) {
+										temp[oddCode] = odd;
+
+										console.log('add new odd');
+
+									}
+								});
+							}
+						} else if (_.indexOf(['closed', 'removed'], market.status) === -1) {
 							temp[marketCode] = market;
+
+							console.log('add new market');
+
 						}
 					});
 				} else {
+
 					bettypes[type] = bettype;
+
+					console.log('add new bettype');
 				}
 			});
 
-			eventModel.set({bettypes: bettypes});
+			console.log('here bets');
+
+			return bettypes;
+		},
+		updateBettypes: function (eventModel, updatedBettypes) {
+			var oldBettypes = eventModel.get('bettypes'),
+				newBettypes = LiveAPI.addNewBettypes(oldBettypes, updatedBettypes);
+			if (newBettypes) {
+				eventModel.set({bettypes: newBettypes});
+			} else {
+				return false;
+			}
 		}
 	};
 	return LiveAPI;

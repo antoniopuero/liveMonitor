@@ -26,6 +26,8 @@ define(['templates', 'views/singleView', 'views/collectionView', 'stage'], funct
 
 	var FootballEventsView = EventsView.extend({
 		initialize: function () {
+			this.collection.bind('remove', this.deleteEvent, this);
+			this.collection.bind('add', this.addEvent, this);
 			this.renderAllEvents();
 		},
 

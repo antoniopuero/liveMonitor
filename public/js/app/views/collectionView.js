@@ -26,13 +26,17 @@ define(['templates', 'backbone', 'views/singleView'], function(templates, Backbo
 			App.Vent.trigger('window:resize');
 		},
 
-		render: function(event) {
-			var eventView = new EventView({
-				model: event
-			});
-			console.log(eventView);
-			this.$el.append(eventView.render().el);
-			return this;
+		resortByTime: function () {
+			this.$el.find('.event-wrapper').sort(function (a, b) {
+				return parseInt($(a).attr('starttime'), 10) - parseInt($(b).attr('starttime'), 10);
+			}).appendTo(this.$el);
+		},
+		deleteEvent: function (eventModel) {
+			eventModel.trigger('remove:from');
+		},
+		addEvent: function (eventModel) {
+			eventModel.trigger('add:to');
+			this.resortByTime();
 		}
 	});
 	return EventsView;

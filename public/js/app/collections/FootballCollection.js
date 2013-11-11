@@ -7,10 +7,7 @@
  */
 define(['models/FootballEvent', 'collections/Events'], function (FootballEvent, Events) {
 	var FootballCollection = Events.extend({
-		model: FootballEvent,
-		initialize: function () {
-//			console.log('football collection');
-		}
+		model: FootballEvent
 	});
 	return FootballCollection;
 });

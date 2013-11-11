@@ -1,31 +1,36 @@
+<div class="row-fluid break-line"></div>
 <div class="row-fluid tennis-set-bets">
 	<div class="span2 event-information">
 		<div class="container-fluid">
-			<div class="row-fluid">
-				<%= setname %>
+			<div class="row-fluid match-part">
+				<%= setNum %> Сет
 			</div>
 		</div>
 	</div>
 	<div class="span2 offset2">
 		<div class="row-fluid">
-			<% if (eventModel.bettypes[set.main]) { %>
-			<div class="container-fluid bettype-wrapper" bettype="<%= set.main %>">
-				<div class="row-fluid bettype-caption"><%= eventModel.bettypes[set.main].name %></div>
+			<div class="container-fluid bettype-wrapper">
+				<div class="row-fluid bettype-caption">Підсумок <%= setName %> сету</div>
 				<div class="container-fluid markets">
-					<%= this.renderMarket(eventModel.bettypes[set.main].markets, 2) %>
+					<% if (bettypes[betsGroup[0]]) { %>
+					<%= this.renderMarket(bettypes[betsGroup[0]].markets, 2) %>
+					<% } else { %>
+					<%= this.renderEmptyMarket() %>
+					<% } %>
 				</div>
 			</div>
-			<% } %>
 		</div>
 		<div class="row-fluid">
-			<% if (eventModel.bettypes[set.total]) { %>
-			<div class="container-fluid bettype-wrapper" bettype="<%= set.total %>">
-				<div class="row-fluid bettype-caption"><%= eventModel.bettypes[set.total].name %></div>
+			<div class="container-fluid bettype-wrapper">
+				<div class="row-fluid bettype-caption">Тотул сета <%= setNum %> пар/непар</div>
 				<div class="container-fluid markets">
-					<%= this.renderMarket(eventModel.bettypes[set.total].markets, 2, 'useForaOddTemplate') %>
+					<% if (bettypes[betsGroup[1]]) { %>
+					<%= this.renderMarket(bettypes[betsGroup[1]].markets, 2) %>
+					<% } else { %>
+					<%= this.renderEmptyMarket() %>
+					<% } %>
 				</div>
 			</div>
-			<% } %>
 		</div>
 	</div>
 </div>
