@@ -6,10 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 define(['models/Event'], function (Event) {
-	var TennisEvent = Event.extend({
-		initialize: function () {
-//			console.log('tennis event');
-		}
+	var TennisEvent = Event.extend({ //THIS IS FOR SOME FUTURE FUNCTIONALITY, NOW IT'S EMPTY
 	});
 	return TennisEvent;
 });

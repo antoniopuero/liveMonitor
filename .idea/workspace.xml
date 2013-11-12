@@ -4,20 +4,20 @@
     <list default="true" id="37d584d4-d388-4547-8dfa-a3f39cb86fda" name="Default" comment="" />
     <ignored path="live3.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/app.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384182812066" ignored="false" />
-    <file path="/main.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383832271145" ignored="false" />
+    <file path="/app.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384276407516" ignored="false" />
+    <file path="/main.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384275171654" ignored="false" />
     <file path="/cometd_controller.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383140573678" ignored="false" />
-    <file path="/style.css" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384182590458" ignored="false" />
+    <file path="/style.css" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384267745201" ignored="false" />
     <file path="/bootstrap-responsive.css" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382339548529" ignored="false" />
     <file path="/bootstrap.css" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382339594111" ignored="false" />
     <file path="/index.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382945106481" ignored="false" />
     <file path="/*.regexp" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383741156509" ignored="false" />
-    <file path="/stage.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384184201191" ignored="false" />
+    <file path="/stage.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384269728455" ignored="false" />
     <file path="/controller.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382345284320" ignored="false" />
     <file path="$PROJECT_DIR$/../newStatic/public/monitor_8/stage/js/env/client/monitor/controller.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383135090209" ignored="false" />
     <file path="/models.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382368950721" ignored="false" />
     <file path="/collections.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382425871649" ignored="false" />
-    <file path="/Events.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384162903502" ignored="false" />
+    <file path="/Events.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384276867722" ignored="false" />
     <file path="/Event.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384162592223" ignored="false" />
     <file path="/Event.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382438189642" ignored="false" />
     <file path="/views.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382946497166" ignored="false" />
@@ -41,34 +41,38 @@
     <file path="/FootballEvent.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383749847555" ignored="false" />
     <file path="/TennisEvent.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382945926060" ignored="false" />
     <file path="/TennisCollection.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1382948337121" ignored="false" />
-    <file path="/FootballView.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384163435402" ignored="false" />
-    <file path="/singleView.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384173700841" ignored="false" />
-    <file path="/TennisView.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384185034465" ignored="false" />
+    <file path="/FootballView.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384277813387" ignored="false" />
+    <file path="/singleView.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384280016721" ignored="false" />
+    <file path="/TennisView.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384279568822" ignored="false" />
     <file path="/football.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383035539997" ignored="false" />
     <file path="/market.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383038189372" ignored="false" />
     <file path="/foraOdd.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383037091744" ignored="false" />
-    <file path="/tennisTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384178261882" ignored="false" />
-    <file path="/footballTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384182787595" ignored="false" />
-    <file path="/setTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384177120513" ignored="false" />
+    <file path="/tennisTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384274697881" ignored="false" />
+    <file path="/footballTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384274675825" ignored="false" />
+    <file path="/setTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384274763752" ignored="false" />
     <file path="/footballHatTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383133071091" ignored="false" />
     <file path="$PROJECT_DIR$/../newStatic/public/monitor/stage/js/env/transport/comet/cometd_controller.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383141090874" ignored="false" />
     <file path="$PROJECT_DIR$/../newStatic/public/terminal/stage/js/env/transport/comet/cometd_controller.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383134439280" ignored="false" />
     <file path="C:/OpenServer/domains/dev/public/sportliga/js/live/env/transport/comet/cometd_controller.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383135745329" ignored="false" />
-    <file path="/secondTimeTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384183964777" ignored="false" />
+    <file path="/secondTimeTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384274681864" ignored="false" />
     <file path="/tennisHatTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383326486409" ignored="false" />
     <file path="$PROJECT_DIR$/../newStatic/public/monitor/stage/js/app/run.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383140253896" ignored="false" />
     <file path="$PROJECT_DIR$/../newStatic/public/monitor/stage/js/app/transport.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383140337832" ignored="false" />
     <file path="/transport.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383140263264" ignored="false" />
     <file path="/TennisScore.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383146237468" ignored="false" />
-    <file path="/beforeScoreTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384182761521" ignored="false" />
-    <file path="/firstTimeTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384183896514" ignored="false" />
+    <file path="/beforeScoreTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384271047474" ignored="false" />
+    <file path="/firstTimeTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384274668705" ignored="false" />
     <file path="/todo.txt" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383330042176" ignored="false" />
     <file path="/foraOddTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383902515314" ignored="false" />
     <file path="/emptyMarket.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1383906603205" ignored="false" />
-    <file path="/collectionView.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384167290540" ignored="false" />
+    <file path="/collectionView.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384277183559" ignored="false" />
     <file path="/evroMarketTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384173186548" ignored="false" />
     <file path="/euroOddTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384173264100" ignored="false" />
     <file path="/tennisScoreTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384183680571" ignored="false" />
+    <file path="/stoppedLayerTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384264093692" ignored="false" />
+    <file path="/infoMessageTemplate.html" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384267507015" ignored="false" />
+    <file path="/infoMessageView.js" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384278639509" ignored="false" />
+    <file path="/a.dummy" changelist="37d584d4-d388-4547-8dfa-a3f39cb86fda" time="1384274805568" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,184 +91,7 @@
     <favorites_list name="live3" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="tennisTemplate.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/tennisTemplate.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setTemplate.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/setTemplate.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="214" column="0" selection-start="3820" selection-end="3839" vertical-scroll-proportion="-12.8">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="footballTemplate.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/footballTemplate.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="52" selection-start="53" selection-end="94" vertical-scroll-proportion="-0.65384614">
-              <folding>
-                <element signature="tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#2;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#2;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#2;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#2;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#3;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#3;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#3;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#3;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#4;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#4;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#4;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#4;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#5;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#5;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#5;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#5;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#6;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#6;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#6;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#6;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#7;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#7;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#7;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#7;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#8;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#8;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#8;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#8;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#9;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#9;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#9;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#9;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#2;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#2;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#2;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#2;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#2;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#1;tag#div#2;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#3;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#3;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#3;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#4;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#4;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#4;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#4;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#4;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#4;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#1;tag#div#4;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#1;tag#div#4;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#1;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#1;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="template.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="3" selection-start="140" selection-end="209" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pre_templates.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/app/views/templates/pre_templates.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="556" column="0" selection-start="34972" selection-end="34972" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="firstTimeTemplate.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/firstTimeTemplate.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="secondTimeTemplate.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/secondTimeTemplate.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding>
-                <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1" expanded="false" />
-                <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1" expanded="false" />
-                <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1" expanded="false" />
-                <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stage.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/app/stage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="275" column="26" selection-start="8491" selection-end="8491" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TennisView.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/js/app/views/TennisView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="27" selection-start="1579" selection-end="1579" vertical-scroll-proportion="0.65524626">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -274,22 +101,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/public/js/app/views/pre_templates/euroMarketTemplate.html" />
-        <option value="$PROJECT_DIR$/public/js/app/views/singleView.js" />
-        <option value="$PROJECT_DIR$/public/js/app/views/back/tennisScoreTemplate.html" />
-        <option value="$PROJECT_DIR$/public/js/app/views/pre_templates/beforeScoreTemplate.html" />
-        <option value="$PROJECT_DIR$/public/js/app/views/pre_templates/footballTemplate.html" />
-        <option value="$PROJECT_DIR$/public/js/app.js" />
-        <option value="$PROJECT_DIR$/public/js/app/views/pre_templates/tennisScoreTemplate.html" />
-        <option value="$PROJECT_DIR$/public/js/components/cometd/cometd_controller.js" />
-        <option value="$PROJECT_DIR$/public/js/app/stage.js" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/public/js/app/views/pre_templates/firstTimeTemplate.html" />
-        <option value="$PROJECT_DIR$/public/js/app/views/pre_templates/tennisTemplate.html" />
         <option value="$PROJECT_DIR$/public/js/app/views/pre_templates/setTemplate.html" />
-        <option value="$PROJECT_DIR$/public/js/app/views/pre_templates/secondTimeTemplate.html" />
         <option value="$PROJECT_DIR$/public/js/app/views/templates/pre_templates.js" />
+        <option value="$PROJECT_DIR$/public/js/main.js" />
+        <option value="$PROJECT_DIR$/public/js/app.js" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/public/js/app/models/Event.js" />
+        <option value="$PROJECT_DIR$/public/js/app/models/FootballEvent.js" />
+        <option value="$PROJECT_DIR$/public/js/app/models/TennisEvent.js" />
+        <option value="$PROJECT_DIR$/public/js/app/collections/Events.js" />
+        <option value="$PROJECT_DIR$/public/js/app/collections/FootballCollection.js" />
+        <option value="$PROJECT_DIR$/public/js/app/collections/TennisCollection.js" />
+        <option value="$PROJECT_DIR$/public/js/app/views/collectionView.js" />
+        <option value="$PROJECT_DIR$/public/js/app/views/FootballView.js" />
+        <option value="$PROJECT_DIR$/public/js/app/views/infoMessageView.js" />
         <option value="$PROJECT_DIR$/public/js/app/views/TennisView.js" />
+        <option value="$PROJECT_DIR$/public/js/app/views/singleView.js" />
       </list>
     </option>
   </component>
@@ -488,154 +315,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="live3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="live3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="live3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="live3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pre_templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="live3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="live3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="live3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="live3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="collections" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="live3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="live3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="live3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="live3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -648,8 +327,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../uwc" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -688,13 +367,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1874" height="1092" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19429494" sideWeight="0.6701245" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19429494" sideWeight="0.67083335" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992464" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -703,7 +383,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32987553" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -770,200 +449,110 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/js/app/views/singleView.js">
+    <entry file="file://$PROJECT_DIR$/public/img/sport_1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img/tennis_server.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="38" selection-start="1636" selection-end="1636" vertical-scroll-proportion="0.0">
+        <state line="257" column="1" selection-start="4276" selection-end="4276" vertical-scroll-proportion="7.3676224">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/euroMarketTemplate.html">
+    <entry file="file://$PROJECT_DIR$/public/js/app/models/Event.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="193" selection-end="193" vertical-scroll-proportion="-3.2692308">
+        <state line="9" column="93" selection-start="330" selection-end="330" vertical-scroll-proportion="0.24757281">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app.js">
+    <entry file="file://$PROJECT_DIR$/public/js/app/models/TennisEvent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="26" selection-start="2019" selection-end="2019" vertical-scroll-proportion="0.0">
+        <state line="8" column="92" selection-start="295" selection-end="295" vertical-scroll-proportion="0.22006473">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/beforeScoreTemplate.html">
+    <entry file="file://$PROJECT_DIR$/public/js/app/models/FootballEvent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="30" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
+        <state line="8" column="39" selection-start="242" selection-end="281" vertical-scroll-proportion="0.22006473">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/tennisScoreTemplate.html">
+    <entry file="file://$PROJECT_DIR$/public/js/app/collections/Events.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="10" selection-start="1535" selection-end="1535" vertical-scroll-proportion="-2.6349206">
+        <state line="14" column="18" selection-start="488" selection-end="488" vertical-scroll-proportion="0.38511327">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/app/collections/FootballCollection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="45" selection-start="294" selection-end="325" vertical-scroll-proportion="0.22006473">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/app/collections/TennisCollection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="43" selection-start="288" selection-end="288" vertical-scroll-proportion="0.22006473">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/app/views/collectionView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="76" selection-start="1807" selection-end="1807" vertical-scroll-proportion="0.78265524">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/app/views/templates/pre_templates.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="141" selection-end="141" vertical-scroll-proportion="0.018458197">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/app/views/infoMessageView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="27" selection-start="1388" selection-end="1388" vertical-scroll-proportion="0.6006424">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/app/views/FootballView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="30" selection-start="1779" selection-end="1779" vertical-scroll-proportion="0.67344755">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/components/cometd/cometd_controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="51" selection-start="1091" selection-end="1091" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="214" column="0" selection-start="3820" selection-end="3839" vertical-scroll-proportion="-12.8">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/footballTemplate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="52" selection-start="53" selection-end="94" vertical-scroll-proportion="-0.65384614">
-          <folding>
-            <element signature="tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#2;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#2;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#2;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#2;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#3;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#3;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#3;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#3;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#4;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#4;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#4;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#4;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#5;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#5;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#5;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#5;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#6;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#6;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#6;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#6;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#7;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#7;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#7;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#7;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#8;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#8;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#8;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#8;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#9;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#9;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#9;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#9;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#2;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#2;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#2;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#2;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#2;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#1;tag#div#2;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#3;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#3;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#3;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#4;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#4;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#4;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#4;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#4;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#4;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#4;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#1;tag#div#4;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#1;tag#div#4;tag#div#0;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#1;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#1;tag#div#2;tag#div#1;tag#div#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/tennisTemplate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/setTemplate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/firstTimeTemplate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/views/pre_templates/secondTimeTemplate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1" expanded="false" />
-            <element signature="tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1" expanded="false" />
-            <element signature="tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#div#1;tag#div#1" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/views/templates/pre_templates.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="556" column="0" selection-start="34972" selection-end="34972" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="3" selection-start="140" selection-end="209" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/app/stage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="275" column="26" selection-start="8491" selection-end="8491" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.2762313">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/app/views/TennisView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="27" selection-start="1579" selection-end="1579" vertical-scroll-proportion="0.65524626">
+        <state line="66" column="7" selection-start="2690" selection-end="2690" vertical-scroll-proportion="1.2012848">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/app/views/singleView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="101" selection-start="2884" selection-end="2884" vertical-scroll-proportion="0.69057816">
           <folding />
         </state>
       </provider>

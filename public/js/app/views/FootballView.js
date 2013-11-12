@@ -5,36 +5,34 @@
  * Time: 9:43
  * To change this template use File | Settings | File Templates.
  */
-define(['templates', 'views/singleView', 'views/collectionView', 'stage'], function (templates, EventView, EventsView, LiveAPI) {
+define(['templates', 'views/singleView', 'views/collectionView'], function (templates, EventView, EventsView) {
 
 	var FootballView = EventView.extend({
-		template: templates.footballTemplate,
-		renderHat: function () {
-			return templates.footballHatTemplate(this.model.attributes);
-		},
-		renderTimeBets: function (statusCode) {
+
+		template: templates.footballTemplate, //TEMPLATE FROM TEMPLATES OBJECT. ALL EVENTS TEMPLATE HAS FIXED BETTYPES LAYOUT
+
+		renderTimeBets: function (statusCode) { //CHECK WHAT STATUS OF EVENT AND RENDER SOME VARIABLE PERIOD TEMPLATES
             var self = this;
-//			console.log(statusCode);
-			if (statusCode == 1) {
+			if (statusCode == 1) { //THIS IS CODE OF FIRST TIME
 				return templates.firstTimeTemplate({model: this.model.attributes, self: self});
-			} else if (statusCode == 2) {
+			} else if (statusCode == 2) { //THIS IS CODE OF SECOND TIME
 				return templates.secondTimeTemplate({model: this.model.attributes, self: self});
 			}
 		}
 	});
 
-
 	var FootballEventsView = EventsView.extend({
 		initialize: function () {
-			this.collection.bind('remove', this.deleteEvent, this);
-			this.collection.bind('add', this.addEvent, this);
-			this.renderAllEvents();
+			this.$el.empty(); //ON FIRST INITIALIZTION THIS WILL CLEAR BODY ELEMENT
+			this.collection.bind('remove', this.deleteEvent, this); //LISTEN TO REMOVE EVENT AND CALL THE DELETEEVENT METHOD OF PARENT (EVENTSVIEW) CONSTRUCTOR
+			this.collection.bind('add', this.addEvent, this); //LISTEN TO ADD EVENT AND CALL THE ADDEEVENT METHOD OF PARENT (EVENTSVIEW) CONSTRUCTOR
+			this.renderAllEvents(); //PARENTS METHOD, RENDER ALL FOOTBALL EVENTS
 		},
 
-		render: function (event) {
-			var footballView = new FootballView({model: event});
-			this.$el.append(footballView.render().el);
-			return this;
+		render: function (event) { //FOR PARTITIAL RENDERING OF SINGLE MODEL IN COLLECTION
+			var footballView = new FootballView({model: event}); //CREATE NEW FOOTBALL VIEW
+			this.$el.append(footballView.render().el); //APPENDING RENDERED FOOTBALL EVENT ELEMENT TO BY ELEMENT
+			return this; //THIS IS A GOOD PATTERN TO RETURN THIS IN RENDER METHOD
 		}
 	});
 	return FootballEventsView;

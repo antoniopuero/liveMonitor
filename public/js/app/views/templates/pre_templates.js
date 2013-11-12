@@ -5,14 +5,13 @@
 define(function () {
 	var App = {};
 
-
 App.PreTemplates || (App.PreTemplates = {});
 
 App.PreTemplates.beforeScoreTemplate = function(obj){
 var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
 with(obj||{}){
 __p+='<div class="row-fluid to-start">'+
-((__t=( timeToStart ))==null?'':__t)+
+((__t=( time ))==null?'':__t)+
 '</div>\r\n';
 }
 return __p;
@@ -22,6 +21,22 @@ App.PreTemplates.emptyMarket = function(obj){
 var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
 with(obj||{}){
 __p+='<div class="row-fluid market-wrapper empty">\r\n\t<div class="span12 bet">\r\n\t\t<div class="container-fluid">\r\n\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n';
+}
+return __p;
+};
+
+App.PreTemplates.euroMarketTemplate = function(obj){
+var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
+with(obj||{}){
+__p+='<div class="row-fluid market-wrapper '+
+((__t=( market.status ))==null?'':__t)+
+'" market="'+
+((__t=( market.market ))==null?'':__t)+
+'">\r\n\t<div class="span3 outcome">'+
+((__t=( market.value ))==null?'':__t)+
+'</div>\r\n\t'+
+((__t=( self.renderEuroOdds(market.odds) ))==null?'':__t)+
+'\r\n</div>\r\n\r\n';
 }
 return __p;
 };
@@ -38,6 +53,164 @@ __p+='<div class="span3 bet '+
 '</div>\r\n\t\t\t<div class="span8 coef">'+
 ((__t=( odd.coef ))==null?'':__t)+
 '</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n';
+}
+return __p;
+};
+
+App.PreTemplates.footballTemplate = function(obj){
+var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
+with(obj||{}){
+__p+='\r\n<div class="container-fluid">\r\n<div class="row-fluid break-line"></div>\r\n<div class="row-fluid foootbal-main-bets">\r\n<div class="span2 event-information">\r\n\t<div class="row-fluid event-hat">\r\n\t\t<div class="span6 event-num"><img src="img/sport_1.png">'+
+((__t=( event_num ))==null?'':__t)+
+'</div>\r\n\t\t<div class="span6 event-status">'+
+((__t=( event.starttime ))==null?'':__t)+
+'</div>\r\n\t</div>\r\n\t<div class="row-fluid competitors text-center"> '+
+((__t=( event.competitors.home.name ))==null?'':__t)+
+' - '+
+((__t=( event.competitors.away.name ))==null?'':__t)+
+' </div>\r\n\t<div class="row-fluid score text-center"> '+
+((__t=( event_stat.score ))==null?'':__t)+
+'</div>\r\n\t<div class="row-fluid status text-center">'+
+((__t=( event.display_status ))==null?'':__t)+
+'</div>\r\n\t<div class="row-fluid to-start text-center">'+
+((__t=( event.time_to_start ))==null?'':__t)+
+'</div>\r\n</div>\r\n<div class="span2 height-template">\r\n\t<div class="row-fluid">\r\n\t\t<div class="container-fluid bettype-wrapper">\r\n\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n';
+ if (event.status == "not_started") { 
+__p+='\r\n\t'+
+((__t=( this.renderStoppedLayer('empty') ))==null?'':__t)+
+'\r\n';
+ } else { 
+__p+='\r\n\t';
+ if (event.betstatus  == "stopped") { 
+__p+='\r\n\t\t'+
+((__t=( this.renderStoppedLayer() ))==null?'':__t)+
+'\r\n\t';
+ } else { 
+__p+='\r\n\t<div class="span10">\r\n\t\t<div class="row-fluid">\r\n\t\t\t<div class="span2andhalf">\r\n\t\t\t\t<div class="row-fluid">\r\n\t\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="1">\r\n\t\t\t\t\t\t<div class="row-fluid bettype-caption">Основні підсумки</div>\r\n\t\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t\t';
+ if (bettypes[1]) { 
+__p+='\r\n\t\t\t\t\t\t\t'+
+((__t=( this.renderMarket(bettypes[1].markets, 3) ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t\t';
+ } else { 
+__p+='\r\n\t\t\t\t\t\t\t'+
+((__t=( this.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t\t';
+ } 
+__p+='\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class="row-fluid">\r\n\t\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="3">\r\n\t\t\t\t\t\t<div class="row-fluid bettype-caption">Подвійні підсумки</div>\r\n\t\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t\t';
+ if (bettypes[3]) { 
+__p+='\r\n\t\t\t\t\t\t\t'+
+((__t=( this.renderMarket(bettypes[3].markets, 3) ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t\t';
+ } else { 
+__p+='\r\n\t\t\t\t\t\t\t'+
+((__t=( this.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t\t';
+ } 
+__p+='\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class="span2andhalf">\r\n\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="10">\r\n\t\t\t\t\t<div class="row-fluid bettype-caption">Фора</div>\r\n\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t';
+ if (bettypes[10]) { 
+__p+='\r\n\t\t\t\t\t\t'+
+((__t=( this.renderMarket(bettypes[10].markets, 2, 'foraTemplate') ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t';
+ } else { 
+__p+='\r\n\t\t\t\t\t\t'+
+((__t=( this.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t';
+ } 
+__p+='\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class="span2andhalf">\r\n\t\t\t\t<div class="row-fluid">\r\n\t\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="12">\r\n\t\t\t\t\t\t<div class="row-fluid bettype-caption">Тотул</div>\r\n\t\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t\t';
+ if (bettypes[12]) { 
+__p+='\r\n\t\t\t\t\t\t\t'+
+((__t=( this.renderMarket(bettypes[12].markets, 2, 'foraTemplate') ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t\t';
+ } else { 
+__p+='\r\n\t\t\t\t\t\t\t'+
+((__t=( this.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t\t';
+ } 
+__p+='\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="27">\r\n\t\t\t\t\t<div class="row-fluid bettype-caption">Тотул матчу пар/непар</div>\r\n\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t';
+ if (bettypes[27]) { 
+__p+='\r\n\t\t\t\t\t\t'+
+((__t=( this.renderMarket(bettypes[27].markets, 2) ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t';
+ } else { 
+__p+='\r\n\t\t\t\t\t\t'+
+((__t=( this.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t';
+ } 
+__p+='\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class="span2andhalf">\r\n\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="33">\r\n\t\t\t\t\t<div class="row-fluid bettype-caption">Кільк. голів в матчі</div>\r\n\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t';
+ if (bettypes[33]) { 
+__p+='\r\n\t\t\t\t\t\t'+
+((__t=( this.renderMarket(bettypes[33].markets, 2) ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t';
+ } else { 
+__p+='\r\n\t\t\t\t\t\t'+
+((__t=( this.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t';
+ } 
+__p+='\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class="span2">\r\n\t\t\t\t<div class="row-fluid">\r\n\t\t\t\t\t<div class="span6">\r\n\t\t\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="102">\r\n\t\t\t\t\t\t\t<div class="row-fluid bettype-caption">Кільк. голів 1к</div>\r\n\t\t\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t\t\t';
+ if (bettypes[102]) { 
+__p+='\r\n\t\t\t\t\t\t\t\t'+
+((__t=( this.renderMarket(bettypes[102].markets, 1) ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t\t\t';
+ } else { 
+__p+='\r\n\t\t\t\t\t\t\t\t'+
+((__t=( this.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t\t\t';
+ } 
+__p+='\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class="span6">\r\n\t\t\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="103">\r\n\t\t\t\t\t\t\t<div class="row-fluid bettype-caption">Кільк. голів 2к</div>\r\n\t\t\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t\t\t';
+ if (bettypes[103]) { 
+__p+='\r\n\t\t\t\t\t\t\t\t'+
+((__t=( this.renderMarket(bettypes[103].markets, 1) ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t\t\t';
+ } else { 
+__p+='\r\n\t\t\t\t\t\t\t\t'+
+((__t=( this.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t\t\t';
+ } 
+__p+='\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class="row-fluid">\r\n\t\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="16">\r\n\t\t\t\t\t\t<div class="row-fluid bettype-caption">Обидві заб\'ють</div>\r\n\t\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t\t';
+ if (bettypes[16]) { 
+__p+='\r\n\t\t\t\t\t\t\t'+
+((__t=( this.renderMarket(bettypes[16].markets, 2) ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t\t';
+ } else { 
+__p+='\r\n\t\t\t\t\t\t\t'+
+((__t=( this.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t\t';
+ } 
+__p+='\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class="row-fluid">\r\n\t\t\t<div class="span9">\r\n\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="7">\r\n\t\t\t\t\t<div class="row-fluid bettype-caption">Точний рахунок</div>\r\n\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t';
+ if (bettypes[7]) { 
+__p+='\r\n\t\t\t\t\t\t'+
+((__t=( this.renderMarket(bettypes[7].markets, 6) ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t';
+ } else { 
+__p+='\r\n\t\t\t\t\t\t'+
+((__t=( this.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t';
+ } 
+__p+='\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class="span3">\r\n\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="104">\r\n\t\t\t\t\t<div class="row-fluid bettype-caption">Єврофора</div>\r\n\t\t\t\t\t';
+ if (bettypes[104]) { 
+__p+='\r\n\t\t\t\t\t\t<div class="row-fluid outcomes">\r\n\t\t\t\t\t\t\t<div class="span3 offset3 outcome">1</div>\r\n\t\t\t\t\t\t\t<div class="span3 outcome">X</div>\r\n\t\t\t\t\t\t\t<div class="span3 outcome">2</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t';
+ } 
+__p+='\r\n\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t';
+ if (bettypes[104]) { 
+__p+='\r\n\t\t\t\t\t\t'+
+((__t=( this.renderMarket(bettypes[104].markets, 3, '', 'Evrofora') ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t';
+ } else { 
+__p+='\r\n\t\t\t\t\t\t'+
+((__t=( this.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t';
+ } 
+__p+='\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t';
+ } 
+__p+='\r\n';
+ } 
+__p+='\r\n</div>\r\n';
+ if (event.status != "not_started") { 
+__p+='\r\n\t'+
+((__t=( this.renderTimeBets(event.status_code) ))==null?'':__t)+
+'\r\n';
+ } 
+__p+='\r\n</div>\r\n';
 }
 return __p;
 };
@@ -64,256 +237,6 @@ __p+='<div class="'+
 return __p;
 };
 
-App.PreTemplates.footballTemplate = function(obj){
-var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
-with(obj||{}){
-__p+='\r\n<div class="container-fluid '+
-((__t=( event.betstatus ))==null?'':__t)+
-'">\r\n<div class="row-fluid break-line"></div>\r\n<div class="row-fluid foootbal-main-bets">\r\n<div class="span2 event-information">\r\n\t<div class="row-fluid event-hat">\r\n\t\t<div class="span6 event-num"><img src="img/sport_1.png">'+
-((__t=( event_num ))==null?'':__t)+
-'</div>\r\n\t\t<div class="span6 event-status">'+
-((__t=( event.starttime ))==null?'':__t)+
-'</div>\r\n\t</div>\r\n\t<div class="row-fluid competitors text-center"> '+
-((__t=( event.competitors.home.name ))==null?'':__t)+
-' - '+
-((__t=( event.competitors.away.name ))==null?'':__t)+
-' </div>\r\n\t<div class="row-fluid score text-center"> '+
-((__t=( event_stat.score ))==null?'':__t)+
-'</div>\r\n\t<div class="row-fluid status text-center">'+
-((__t=( event.status ))==null?'':__t)+
-'</div>\r\n\t<div class="row-fluid to-start text-center">'+
-((__t=( event.time_to_start ))==null?'':__t)+
-'</div>\r\n</div>\r\n<div class="span2 height-template">\r\n\t<div class="row-fluid">\r\n\t\t<div class="container-fluid bettype-wrapper">\r\n\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<div class="span10">\r\n\t<div class="row-fluid">\r\n\t\t<div class="span2andhalf">\r\n\t\t\t<div class="row-fluid">\r\n\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="1">\r\n\t\t\t\t\t<div class="row-fluid bettype-caption">Основні підсумки</div>\r\n\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t';
- if (bettypes[1]) { 
-__p+='\r\n\t\t\t\t\t\t'+
-((__t=( this.renderMarket(bettypes[1].markets, 3) ))==null?'':__t)+
-'\r\n\t\t\t\t\t\t';
- } else { 
-__p+='\r\n\t\t\t\t\t\t'+
-((__t=( this.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t\t\t\t';
- } 
-__p+='\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class="row-fluid">\r\n\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="3">\r\n\t\t\t\t\t<div class="row-fluid bettype-caption">Подвійні підсумки</div>\r\n\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t';
- if (bettypes[3]) { 
-__p+='\r\n\t\t\t\t\t\t'+
-((__t=( this.renderMarket(bettypes[3].markets, 3) ))==null?'':__t)+
-'\r\n\t\t\t\t\t\t';
- } else { 
-__p+='\r\n\t\t\t\t\t\t'+
-((__t=( this.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t\t\t\t';
- } 
-__p+='\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class="span2andhalf">\r\n\t\t\t<div class="container-fluid bettype-wrapper" bettype="10">\r\n\t\t\t\t<div class="row-fluid bettype-caption">Фора</div>\r\n\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t';
- if (bettypes[10]) { 
-__p+='\r\n\t\t\t\t\t'+
-((__t=( this.renderMarket(bettypes[10].markets, 2, 'foraTemplate') ))==null?'':__t)+
-'\r\n\t\t\t\t\t';
- } else { 
-__p+='\r\n\t\t\t\t\t'+
-((__t=( this.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t\t\t';
- } 
-__p+='\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class="span2andhalf">\r\n\t\t\t<div class="row-fluid">\r\n\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="12">\r\n\t\t\t\t\t<div class="row-fluid bettype-caption">Тотул</div>\r\n\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t';
- if (bettypes[12]) { 
-__p+='\r\n\t\t\t\t\t\t'+
-((__t=( this.renderMarket(bettypes[12].markets, 2, 'foraTemplate') ))==null?'':__t)+
-'\r\n\t\t\t\t\t\t';
- } else { 
-__p+='\r\n\t\t\t\t\t\t'+
-((__t=( this.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t\t\t\t';
- } 
-__p+='\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class="container-fluid bettype-wrapper" bettype="27">\r\n\t\t\t\t<div class="row-fluid bettype-caption">Тотул матчу пар/непар</div>\r\n\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t';
- if (bettypes[27]) { 
-__p+='\r\n\t\t\t\t\t'+
-((__t=( this.renderMarket(bettypes[27].markets, 2) ))==null?'':__t)+
-'\r\n\t\t\t\t\t';
- } else { 
-__p+='\r\n\t\t\t\t\t'+
-((__t=( this.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t\t\t';
- } 
-__p+='\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class="span2andhalf">\r\n\t\t\t<div class="container-fluid bettype-wrapper" bettype="33">\r\n\t\t\t\t<div class="row-fluid bettype-caption">Кільк. голів в матчі</div>\r\n\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t';
- if (bettypes[33]) { 
-__p+='\r\n\t\t\t\t\t'+
-((__t=( this.renderMarket(bettypes[33].markets, 2) ))==null?'':__t)+
-'\r\n\t\t\t\t\t';
- } else { 
-__p+='\r\n\t\t\t\t\t'+
-((__t=( this.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t\t\t';
- } 
-__p+='\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class="span2">\r\n\t\t\t<div class="row-fluid">\r\n\t\t\t\t<div class="span6">\r\n\t\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="102">\r\n\t\t\t\t\t\t<div class="row-fluid bettype-caption">Кільк. голів 1к</div>\r\n\t\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t\t';
- if (bettypes[102]) { 
-__p+='\r\n\t\t\t\t\t\t\t'+
-((__t=( this.renderMarket(bettypes[102].markets, 1) ))==null?'':__t)+
-'\r\n\t\t\t\t\t\t\t';
- } else { 
-__p+='\r\n\t\t\t\t\t\t\t'+
-((__t=( this.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t\t\t\t\t';
- } 
-__p+='\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class="span6">\r\n\t\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="103">\r\n\t\t\t\t\t\t<div class="row-fluid bettype-caption">Кільк. голів 2к</div>\r\n\t\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t\t';
- if (bettypes[103]) { 
-__p+='\r\n\t\t\t\t\t\t\t'+
-((__t=( this.renderMarket(bettypes[103].markets, 1) ))==null?'':__t)+
-'\r\n\t\t\t\t\t\t\t';
- } else { 
-__p+='\r\n\t\t\t\t\t\t\t'+
-((__t=( this.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t\t\t\t\t';
- } 
-__p+='\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class="row-fluid">\r\n\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="16">\r\n\t\t\t\t\t<div class="row-fluid bettype-caption">Обидві заб\'ють</div>\r\n\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t';
- if (bettypes[16]) { 
-__p+='\r\n\t\t\t\t\t\t'+
-((__t=( this.renderMarket(bettypes[16].markets, 2) ))==null?'':__t)+
-'\r\n\t\t\t\t\t\t';
- } else { 
-__p+='\r\n\t\t\t\t\t\t'+
-((__t=( this.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t\t\t\t';
- } 
-__p+='\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class="row-fluid">\r\n\t\t<div class="span9">\r\n\t\t\t<div class="container-fluid bettype-wrapper" bettype="7">\r\n\t\t\t\t<div class="row-fluid bettype-caption">Точний рахунок</div>\r\n\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t';
- if (bettypes[7]) { 
-__p+='\r\n\t\t\t\t\t'+
-((__t=( this.renderMarket(bettypes[7].markets, 6) ))==null?'':__t)+
-'\r\n\t\t\t\t\t';
- } else { 
-__p+='\r\n\t\t\t\t\t'+
-((__t=( this.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t\t\t';
- } 
-__p+='\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class="span3">\r\n\t\t\t<div class="container-fluid bettype-wrapper" bettype="104">\r\n\t\t\t\t<div class="row-fluid bettype-caption">Єврофора</div>\r\n\t\t\t\t';
- if (bettypes[104]) { 
-__p+='\r\n\t\t\t\t\t<div class="row-fluid outcomes">\r\n\t\t\t\t\t\t<div class="span3 offset3 outcome">1</div>\r\n\t\t\t\t\t\t<div class="span3 outcome">X</div>\r\n\t\t\t\t\t\t<div class="span3 outcome">2</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t';
- } 
-__p+='\r\n\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t';
- if (bettypes[104]) { 
-__p+='\r\n\t\t\t\t\t'+
-((__t=( this.renderMarket(bettypes[104].markets, 3, '', 'Evrofora') ))==null?'':__t)+
-'\r\n\t\t\t\t\t';
- } else { 
-__p+='\r\n\t\t\t\t\t'+
-((__t=( this.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t\t\t';
- } 
-__p+='\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n</div>\r\n\t'+
-((__t=( this.renderTimeBets(event.status_code) ))==null?'':__t)+
-'\r\n</div>\r\n';
-}
-return __p;
-};
-
-App.PreTemplates.firstTimeTemplate = function(obj){
-var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
-with(obj||{}){
-__p+='<div class="row-fluid break-line"></div>\r\n<div class="row-fluid foootbal-firsttime-bets">\r\n\t<div class="span2 event-information">\r\n\t\t<div class="container-fluid match-part">\r\n\t\t\t1 Тайм\r\n\t\t</div>\r\n\t</div>\r\n\t<div class="span2 height-template">\r\n\t\t<div class="row-fluid">\r\n\t\t\t<div class="container-fluid bettype-wrapper">\r\n\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class="span10">\r\n\t\t<div class="row-fluid">\r\n\t\t\t<div class="span2andhalf ">\r\n\t\t\t\t<div class="row-fluid">\r\n\t\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="4">\r\n\t\t\t\t\t\t<div class="row-fluid bettype-caption">Пісумок першого тайму</div>\r\n\t\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t\t';
- if (model.bettypes[4]) { 
-__p+='\r\n\t\t\t\t\t\t\t'+
-((__t=( self.renderMarket(model.bettypes[4].markets, 3) ))==null?'':__t)+
-'\r\n\t\t\t\t\t\t\t';
- } else { 
-__p+='\r\n\t\t\t\t\t\t\t'+
-((__t=( self.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t\t\t\t\t';
- } 
-__p+='\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class="span2andhalf">\r\n\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="143">\r\n\t\t\t\t\t<div class="row-fluid bettype-caption">Кільк. голів 1-му таймі</div>\r\n\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t';
- if (model.bettypes[143]) { 
-__p+='\r\n\t\t\t\t\t\t'+
-((__t=( self.renderMarket(model.bettypes[143].markets, 2) ))==null?'':__t)+
-'\r\n\t\t\t\t\t\t';
- } else { 
-__p+='\r\n\t\t\t\t\t\t'+
-((__t=( self.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t\t\t\t';
- } 
-__p+='\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class="span1">\r\n\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="144">\r\n\t\t\t\t\t<div class="row-fluid bettype-caption">Кільк. голів 1к 1т</div>\r\n\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t';
- if (model.bettypes[144]) { 
-__p+='\r\n\t\t\t\t\t\t'+
-((__t=( self.renderMarket(model.bettypes[144].markets, 1) ))==null?'':__t)+
-'\r\n\t\t\t\t\t\t';
- } else { 
-__p+='\r\n\t\t\t\t\t\t'+
-((__t=( self.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t\t\t\t';
- } 
-__p+='\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class="span1">\r\n\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="145">\r\n\t\t\t\t\t<div class="row-fluid bettype-caption">Кільк. голів 2к 1т</div>\r\n\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t';
- if (model.bettypes[145]) { 
-__p+='\r\n\t\t\t\t\t\t'+
-((__t=( self.renderMarket(model.bettypes[145].markets, 1) ))==null?'':__t)+
-'\r\n\t\t\t\t\t\t';
- } else { 
-__p+='\r\n\t\t\t\t\t\t'+
-((__t=( self.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t\t\t\t';
- } 
-__p+='\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class="span5">\r\n\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="145">\r\n\t\t\t\t\t<div class="row-fluid bettype-caption">Точний рахунок 1-го тайму</div>\r\n\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t';
- if (model.bettypes[112]) { 
-__p+='\r\n\t\t\t\t\t\t'+
-((__t=( self.renderMarket(model.bettypes[112].markets, 3) ))==null?'':__t)+
-'\r\n\t\t\t\t\t\t';
- } else { 
-__p+='\r\n\t\t\t\t\t\t'+
-((__t=( self.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t\t\t\t';
- } 
-__p+='\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n';
-}
-return __p;
-};
-
-App.PreTemplates.secondTimeTemplate = function(obj){
-var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
-with(obj||{}){
-__p+='<div class="row-fluid break-line"></div>\r\n<div class="row-fluid foootbal-firsttime-bets">\r\n\t<div class="span2 event-information">\r\n\t\t<div class="container-fluid match-part">\r\n\t\t\t2 Тайм\r\n\t\t</div>\r\n\t</div>\r\n\t<div class="span2 height-template">\r\n\t\t<div class="row-fluid">\r\n\t\t\t<div class="container-fluid bettype-wrapper">\r\n\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class="span10">\r\n\t\t<div class="row-fluid">\r\n\t\t\t<div class="span2andhalf ">\r\n\t\t\t\t<div class="row-fluid">\r\n\t\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="13">\r\n\t\t\t\t\t\t<div class="row-fluid bettype-caption">Пісумок другого тайму</div>\r\n\t\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t\t';
- if (model.bettypes[13]) { 
-__p+='\r\n\t\t\t\t\t\t\t'+
-((__t=( self.renderMarket(model.bettypes[13].markets, 3) ))==null?'':__t)+
-'\r\n\t\t\t\t\t\t\t';
- } else { 
-__p+='\r\n\t\t\t\t\t\t\t'+
-((__t=( self.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t\t\t\t\t';
- } 
-__p+='\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n';
-}
-return __p;
-};
-
-App.PreTemplates.setTemplate = function(obj){
-var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
-with(obj||{}){
-__p+='<div class="row-fluid break-line"></div>\r\n<div class="row-fluid tennis-set-bets">\r\n\t<div class="span2 event-information">\r\n\t\t<div class="container-fluid">\r\n\t\t\t<div class="row-fluid match-part">\r\n\t\t\t\t'+
-((__t=( setNum ))==null?'':__t)+
-' Сет\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class="span2 offset2">\r\n\t\t<div class="row-fluid">\r\n\t\t\t<div class="container-fluid bettype-wrapper">\r\n\t\t\t\t<div class="row-fluid bettype-caption">Підсумок '+
-((__t=( setName ))==null?'':__t)+
-' сету</div>\r\n\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t';
- if (bettypes[betsGroup[0]]) { 
-__p+='\r\n\t\t\t\t\t'+
-((__t=( this.renderMarket(bettypes[betsGroup[0]].markets, 2) ))==null?'':__t)+
-'\r\n\t\t\t\t\t';
- } else { 
-__p+='\r\n\t\t\t\t\t'+
-((__t=( this.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t\t\t';
- } 
-__p+='\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class="row-fluid">\r\n\t\t\t<div class="container-fluid bettype-wrapper">\r\n\t\t\t\t<div class="row-fluid bettype-caption">Тотул сета '+
-((__t=( setNum ))==null?'':__t)+
-' пар/непар</div>\r\n\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t';
- if (bettypes[betsGroup[1]]) { 
-__p+='\r\n\t\t\t\t\t'+
-((__t=( this.renderMarket(bettypes[betsGroup[1]].markets, 2) ))==null?'':__t)+
-'\r\n\t\t\t\t\t';
- } else { 
-__p+='\r\n\t\t\t\t\t'+
-((__t=( this.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t\t\t';
- } 
-__p+='\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n';
-}
-return __p;
-};
-
 App.PreTemplates.marketTemplate = function(obj){
 var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
 with(obj||{}){
@@ -328,18 +251,252 @@ __p+='<div class="row-fluid market-wrapper '+
 return __p;
 };
 
-App.PreTemplates.euroMarketTemplate = function(obj){
+App.PreTemplates.infoMessageTemplate = function(obj){
 var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
 with(obj||{}){
-__p+='<div class="row-fluid market-wrapper '+
-((__t=( market.status ))==null?'':__t)+
-'" market="'+
-((__t=( market.market ))==null?'':__t)+
-'">\r\n\t<div class="span3 outcome">'+
-((__t=( market.value ))==null?'':__t)+
-'</div>\r\n\t'+
-((__t=( self.renderEuroOdds(market.odds) ))==null?'':__t)+
-'\r\n</div>\r\n\r\n';
+__p+='<div class="span12">'+
+((__t=( message ))==null?'':__t)+
+'</div>\r\n';
+ if (loading) { 
+__p+='\r\n\t<img src="/img/loader.gif">\r\n';
+ } 
+__p+='\r\n';
+}
+return __p;
+};
+
+App.PreTemplates.secondTimeTemplate = function(obj){
+var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
+with(obj||{}){
+__p+='<div class="row-fluid break-line"></div>\r\n<div class="row-fluid foootbal-firsttime-bets">\r\n\t<div class="span2 event-information">\r\n\t\t<div class="container-fluid match-part">\r\n\t\t\t2 Тайм\r\n\t\t</div>\r\n\t</div>\r\n\t<div class="span2 height-template">\r\n\t\t<div class="row-fluid">\r\n\t\t\t<div class="container-fluid bettype-wrapper">\r\n\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t';
+ if (model.event.betstatus  == 'stopped') { 
+__p+='\r\n\t\t'+
+((__t=( this.renderStoppedLayer('empty') ))==null?'':__t)+
+'\r\n\t';
+ } else { 
+__p+='\r\n\t<div class="span10">\r\n\t\t<div class="row-fluid">\r\n\t\t\t<div class="span2andhalf ">\r\n\t\t\t\t<div class="row-fluid">\r\n\t\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="13">\r\n\t\t\t\t\t\t<div class="row-fluid bettype-caption">Пісумок другого тайму</div>\r\n\t\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t\t';
+ if (model.bettypes[13]) { 
+__p+='\r\n\t\t\t\t\t\t\t'+
+((__t=( self.renderMarket(model.bettypes[13].markets, 3) ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t\t';
+ } else { 
+__p+='\r\n\t\t\t\t\t\t\t'+
+((__t=( self.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t\t';
+ } 
+__p+='\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t';
+ } 
+__p+='\r\n</div>\r\n';
+}
+return __p;
+};
+
+App.PreTemplates.oddTemplate = function(obj){
+var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
+with(obj||{}){
+__p+='<div class="'+
+((__t=( width ))==null?'':__t)+
+' bet '+
+((__t=( odd.status ))==null?'':__t)+
+'">\r\n\t<div class="container-fluid">\r\n\t\t<div class="row-fluid  outcome">'+
+((__t=( odd.outcome ))==null?'':__t)+
+'</div>\r\n\t\t<div class="row-fluid odd '+
+((__t=( odd.change ))==null?'':__t)+
+'">\r\n\t\t\t<div class="span4 castcode">'+
+((__t=( odd.code ))==null?'':__t)+
+'</div>\r\n\t\t\t<div class="span8 coef">'+
+((__t=( odd.coef ))==null?'':__t)+
+'</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n';
+}
+return __p;
+};
+
+App.PreTemplates.tennisTemplate = function(obj){
+var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
+with(obj||{}){
+__p+='<div class="row-fluid break-line"></div>\r\n<div class="container-fluid">\r\n<div class="row-fluid tennis-main-bets">\r\n<div class="span2 event-information">\r\n\t<div class="row-fluid event-hat">\r\n\t\t<div class="span6 event-num"><img src="img/sport_3.png">'+
+((__t=( event_num ))==null?'':__t)+
+'</div>\r\n\t\t<div class="span6 event-status">'+
+((__t=( event.starttime ))==null?'':__t)+
+'</div>\r\n\t</div>\r\n\t<div class="row-fluid competitors text-center"> '+
+((__t=( event.competitors.home.name ))==null?'':__t)+
+' - '+
+((__t=( event.competitors.away.name ))==null?'':__t)+
+' </div>\r\n\t<div class="row-fluid status text-center">'+
+((__t=( event.display_status ))==null?'':__t)+
+'</div>\r\n\t<div class="row-fluid setscore text-center">'+
+((__t=( this.renderScore(event_stat, event.status, event.time_to_start) ))==null?'':__t)+
+'</div>\r\n</div>\r\n<div class="span2 height-template">\r\n\t<div class="row-fluid">\r\n\t\t<div class="container-fluid bettype-wrapper">\r\n\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n';
+ if (event.status == "not_started") { 
+__p+='\r\n\t'+
+((__t=( this.renderStoppedLayer('empty') ))==null?'':__t)+
+'\r\n';
+ } else { 
+__p+='\r\n\t';
+ if (event.betstatus  == "stopped") { 
+__p+='\r\n\t\t'+
+((__t=( this.renderStoppedLayer() ))==null?'':__t)+
+'\r\n\t';
+ } else { 
+__p+='\r\n\t\t<div class="span2">\r\n\t\t\t<div class="row-fluid">\r\n\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="2">\r\n\t\t\t\t\t<div class="row-fluid bettype-caption">Основні підсумки</div>\r\n\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t';
+ if (bettypes[2]) { 
+__p+='\r\n\t\t\t\t\t\t'+
+((__t=( this.renderMarket(bettypes[2].markets, 2) ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t';
+ } else { 
+__p+='\r\n\t\t\t\t\t\t'+
+((__t=( this.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t';
+ } 
+__p+='\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class="row-fluid">\r\n\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="122">\r\n\t\t\t\t\t<div class="row-fluid bettype-caption">Кільк. сетів з 3</div>\r\n\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t';
+ if (bettypes[122]) { 
+__p+='\r\n\t\t\t\t\t\t'+
+((__t=( this.renderMarket(bettypes[122].markets, 2) ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t';
+ } else { 
+__p+='\r\n\t\t\t\t\t\t'+
+((__t=( this.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t';
+ } 
+__p+='\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class="row-fluid">\r\n\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="128">\r\n\t\t\t\t\t<div class="row-fluid bettype-caption">Кільк. сетів з 5</div>\r\n\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t';
+ if (bettypes[128]) { 
+__p+='\r\n\t\t\t\t\t\t'+
+((__t=( this.renderMarket(bettypes[128].markets, 3) ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t';
+ } else { 
+__p+='\r\n\t\t\t\t\t\t'+
+((__t=( this.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t';
+ } 
+__p+='\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class="span2">\r\n\t\t\t<div class="container-fluid bettype-wrapper" bettype="79">\r\n\t\t\t\t<div class="row-fluid bettype-caption">Фора</div>\r\n\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t';
+ if (bettypes[79]) { 
+__p+='\r\n\t\t\t\t\t'+
+((__t=( this.renderMarket(bettypes[79].markets, 2, 'useForaTemplate') ))==null?'':__t)+
+'\r\n\t\t\t\t\t';
+ } else { 
+__p+='\r\n\t\t\t\t\t'+
+((__t=( this.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t';
+ } 
+__p+='\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class="span2">\r\n\t\t\t<div class="container-fluid bettype-wrapper" bettype="80">\r\n\t\t\t\t<div class="row-fluid bettype-caption">Тотул</div>\r\n\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t';
+ if (bettypes[80]) { 
+__p+='\r\n\t\t\t\t\t'+
+((__t=( this.renderMarket(bettypes[80].markets, 2, 'useForaTemplate') ))==null?'':__t)+
+'\r\n\t\t\t\t\t';
+ } else { 
+__p+='\r\n\t\t\t\t\t'+
+((__t=( this.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t';
+ } 
+__p+='\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class="span2">\r\n\t\t\t<div class="container-fluid bettype-wrapper" bettype="9">\r\n\t\t\t\t<div class="row-fluid bettype-caption">Рахунок матчу з 5</div>\r\n\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t';
+ if (bettypes[9]) { 
+__p+='\r\n\t\t\t\t\t'+
+((__t=( this.renderMarket(bettypes[9].markets, 2) ))==null?'':__t)+
+'\r\n\t\t\t\t\t';
+ } else { 
+__p+='\r\n\t\t\t\t\t'+
+((__t=( this.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t';
+ } 
+__p+='\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class="span2">\r\n\t\t<div class="row-fluid">\r\n\t\t\t<div class="container-fluid bettype-wrapper" bettype="80">\r\n\t\t\t\t<div class="row-fluid bettype-caption">Рахунок матчу з 3</div>\r\n\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t';
+ if (bettypes[8]) { 
+__p+='\r\n\t\t\t\t\t'+
+((__t=( this.renderMarket(bettypes[8].markets, 2) ))==null?'':__t)+
+'\r\n\t\t\t\t\t';
+ } else { 
+__p+='\r\n\t\t\t\t\t'+
+((__t=( this.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t';
+ } 
+__p+='\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class="row-fluid">\r\n\t\t\t<div class="container-fluid bettype-wrapper" bettype="121">\r\n\t\t\t\t<div class="row-fluid bettype-caption">Тотул пар/непар</div>\r\n\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t';
+ if (bettypes[121]) { 
+__p+='\r\n\t\t\t\t\t'+
+((__t=( this.renderMarket(bettypes[121].markets, 2) ))==null?'':__t)+
+'\r\n\t\t\t\t\t';
+ } else { 
+__p+='\r\n\t\t\t\t\t'+
+((__t=( this.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t';
+ } 
+__p+='\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t';
+ } 
+__p+='\r\n';
+ } 
+__p+='\r\n</div>\r\n';
+ if (event.status != "not_started") { 
+__p+='\r\n\t'+
+((__t=( this.renderSetBets(bettypes, event.status, event.betstatus) ))==null?'':__t)+
+'\r\n';
+ } 
+__p+='\r\n</div>\r\n';
+}
+return __p;
+};
+
+App.PreTemplates.setTemplate = function(obj){
+var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
+with(obj||{}){
+__p+='<div class="row-fluid break-line"></div>\r\n<div class="row-fluid tennis-set-bets">\r\n\t<div class="span2 event-information">\r\n\t\t\t<div class="row-fluid match-part">\r\n\t\t\t\t'+
+((__t=( setNum ))==null?'':__t)+
+' Сет\r\n\t\t\t</div>\r\n\t</div>\r\n\t<div class="span2 height-template">\r\n\t\t<div class="row-fluid">\r\n\t\t\t<div class="container-fluid bettype-wrapper">\r\n\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t';
+ if (betstatus  == "stopped") { 
+__p+='\r\n\t\t'+
+((__t=( this.renderStoppedLayer('empty') ))==null?'':__t)+
+'\r\n\t';
+ } else { 
+__p+='\r\n\t<div class="span2">\r\n\t\t';
+ if (betsGroup[0] == 'none') { 
+__p+='\r\n\t\t <div class="row-fluid"></div>\r\n\t\t';
+ } else { 
+__p+='\r\n\t\t<div class="row-fluid">\r\n\t\t\t<div class="container-fluid bettype-wrapper">\r\n\t\t\t\t<div class="row-fluid bettype-caption">Підсумок '+
+((__t=( setName ))==null?'':__t)+
+' сету</div>\r\n\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t';
+ if (bettypes[betsGroup[0]]) { 
+__p+='\r\n\t\t\t\t\t'+
+((__t=( self.renderMarket(bettypes[betsGroup[0]].markets, 2) ))==null?'':__t)+
+'\r\n\t\t\t\t\t';
+ } else { 
+__p+='\r\n\t\t\t\t\t'+
+((__t=( self.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t';
+ } 
+__p+='\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t';
+ } 
+__p+='\r\n\t\t<div class="row-fluid">\r\n\t\t\t<div class="container-fluid bettype-wrapper">\r\n\t\t\t\t<div class="row-fluid bettype-caption">Тотул сета '+
+((__t=( setNum ))==null?'':__t)+
+' пар/непар</div>\r\n\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t';
+ if (bettypes[betsGroup[1]]) { 
+__p+='\r\n\t\t\t\t\t'+
+((__t=( self.renderMarket(bettypes[betsGroup[1]].markets, 2) ))==null?'':__t)+
+'\r\n\t\t\t\t\t';
+ } else { 
+__p+='\r\n\t\t\t\t\t'+
+((__t=( self.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t';
+ } 
+__p+='\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class="span2">\r\n\t\t<div class="row-fluid">\r\n\t\t\t<div class="container-fluid bettype-wrapper">\r\n\t\t\t\t<div class="row-fluid bettype-caption">Тотул сета '+
+((__t=( setNum ))==null?'':__t)+
+'</div>\r\n\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t';
+ if (bettypes[betsGroup[2]]) { 
+__p+='\r\n\t\t\t\t\t'+
+((__t=( self.renderMarket(bettypes[betsGroup[2]].markets, 2, 'useForaTemplate') ))==null?'':__t)+
+'\r\n\t\t\t\t\t';
+ } else { 
+__p+='\r\n\t\t\t\t\t'+
+((__t=( self.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t';
+ } 
+__p+='\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t';
+ } 
+__p+='\r\n</div>\r\n';
+}
+return __p;
+};
+
+App.PreTemplates.stoppedLayerTemplate = function(obj){
+var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
+with(obj||{}){
+__p+='<div class="span10 stopped-layer">\r\n\tСтавки припинені\r\n</div>\r\n';
 }
 return __p;
 };
@@ -428,130 +585,73 @@ __p+='\r\n\t</div>\r\n</div>\r\n';
 return __p;
 };
 
-App.PreTemplates.oddTemplate = function(obj){
+App.PreTemplates.firstTimeTemplate = function(obj){
 var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
 with(obj||{}){
-__p+='<div class="'+
-((__t=( width ))==null?'':__t)+
-' bet '+
-((__t=( odd.status ))==null?'':__t)+
-'">\r\n\t<div class="container-fluid">\r\n\t\t<div class="row-fluid  outcome">'+
-((__t=( odd.outcome ))==null?'':__t)+
-'</div>\r\n\t\t<div class="row-fluid odd '+
-((__t=( odd.change ))==null?'':__t)+
-'">\r\n\t\t\t<div class="span4 castcode">'+
-((__t=( odd.code ))==null?'':__t)+
-'</div>\r\n\t\t\t<div class="span8 coef">'+
-((__t=( odd.coef ))==null?'':__t)+
-'</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n';
-}
-return __p;
-};
-
-App.PreTemplates.tennisTemplate = function(obj){
-var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
-with(obj||{}){
-__p+='<div class="row-fluid break-line"></div>\r\n<div class="container-fluid '+
-((__t=( event.betstatus ))==null?'':__t)+
-'">\r\n<div class="row-fluid tennis-main-bets">\r\n<div class="span2 event-information">\r\n\t<div class="row-fluid event-hat">\r\n\t\t<div class="span6 event-num"><img src="img/sport_3.png">'+
-((__t=( event_num ))==null?'':__t)+
-'</div>\r\n\t\t<div class="span6 event-status">'+
-((__t=( event.starttime ))==null?'':__t)+
-'</div>\r\n\t</div>\r\n\t<div class="row-fluid competitors text-center"> '+
-((__t=( event.competitors.home.name ))==null?'':__t)+
-' - '+
-((__t=( event.competitors.away.name ))==null?'':__t)+
-' </div>\r\n\t<div class="row-fluid status text-center">'+
-((__t=( event.status ))==null?'':__t)+
-'</div>\r\n\t<div class="row-fluid setscore text-center">'+
-((__t=( this.renderScore(event_stat, event.status_code) ))==null?'':__t)+
-'</div>\r\n</div>\r\n<div class="span2 offset2">\r\n\t<div class="row-fluid">\r\n\t\t<div class="container-fluid bettype-wrapper" bettype="2">\r\n\t\t\t<div class="row-fluid bettype-caption">Основні підсумки</div>\r\n\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t';
- if (bettypes[2]) { 
-__p+='\r\n\t\t\t\t\t'+
-((__t=( this.renderMarket(bettypes[2].markets, 2) ))==null?'':__t)+
-'\r\n\t\t\t\t';
+__p+='<div class="row-fluid break-line"></div>\r\n<div class="row-fluid foootbal-firsttime-bets">\r\n\t<div class="span2 event-information">\r\n\t\t<div class="container-fluid match-part">\r\n\t\t\t1 Тайм\r\n\t\t</div>\r\n\t</div>\r\n\t<div class="span2 height-template">\r\n\t\t<div class="row-fluid">\r\n\t\t\t<div class="container-fluid bettype-wrapper">\r\n\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class="row-fluid market-wrapper empty">\r\n\t\t\t\t\t\t<div class="span12 bet">\r\n\t\t\t\t\t\t\t<div class="container-fluid">\r\n\t\t\t\t\t\t\t\t<div class="row-fluid  outcome">empty</div>\r\n\t\t\t\t\t\t\t\t<div class="row-fluid odd">\r\n\t\t\t\t\t\t\t\t\t<div class="span4 castcode">1</div>\r\n\t\t\t\t\t\t\t\t\t<div class="span8 coef">0</div>\r\n\t\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t';
+ if (model.event.betstatus  == 'stopped') { 
+__p+='\r\n\t\t'+
+((__t=( this.renderStoppedLayer('empty') ))==null?'':__t)+
+'\r\n\t';
  } else { 
-__p+='\r\n\t\t\t\t\t'+
-((__t=( this.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t\t';
- } 
-__p+='\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class="row-fluid">\r\n\t\t<div class="container-fluid bettype-wrapper" bettype="122">\r\n\t\t\t<div class="row-fluid bettype-caption">Кільк. сетів з 3</div>\r\n\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t';
- if (bettypes[122]) { 
-__p+='\r\n\t\t\t\t\t'+
-((__t=( this.renderMarket(bettypes[122].markets, 2) ))==null?'':__t)+
-'\r\n\t\t\t\t';
+__p+='\r\n\t<div class="span10">\r\n\t\t<div class="row-fluid">\r\n\t\t\t<div class="span2andhalf ">\r\n\t\t\t\t<div class="row-fluid">\r\n\t\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="4">\r\n\t\t\t\t\t\t<div class="row-fluid bettype-caption">Пісумок першого тайму</div>\r\n\t\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t\t';
+ if (model.bettypes[4]) { 
+__p+='\r\n\t\t\t\t\t\t\t'+
+((__t=( self.renderMarket(model.bettypes[4].markets, 3) ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t\t';
  } else { 
-__p+='\r\n\t\t\t\t\t'+
-((__t=( this.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t\t';
+__p+='\r\n\t\t\t\t\t\t\t'+
+((__t=( self.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t\t';
  } 
-__p+='\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class="row-fluid">\r\n\t\t<div class="container-fluid bettype-wrapper" bettype="128">\r\n\t\t\t<div class="row-fluid bettype-caption">Кільк. сетів з 5</div>\r\n\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t';
- if (bettypes[128]) { 
-__p+='\r\n\t\t\t\t\t'+
-((__t=( this.renderMarket(bettypes[128].markets, 3) ))==null?'':__t)+
-'\r\n\t\t\t\t';
+__p+='\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class="span2andhalf">\r\n\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="143">\r\n\t\t\t\t\t<div class="row-fluid bettype-caption">Кільк. голів 1-му таймі</div>\r\n\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t';
+ if (model.bettypes[143]) { 
+__p+='\r\n\t\t\t\t\t\t'+
+((__t=( self.renderMarket(model.bettypes[143].markets, 2) ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t';
  } else { 
-__p+='\r\n\t\t\t\t\t'+
-((__t=( this.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t\t';
+__p+='\r\n\t\t\t\t\t\t'+
+((__t=( self.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t';
  } 
-__p+='\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<div class="span2">\r\n\t<div class="container-fluid bettype-wrapper" bettype="79">\r\n\t\t<div class="row-fluid bettype-caption">Фора</div>\r\n\t\t<div class="container-fluid markets">\r\n\t\t\t';
- if (bettypes[79]) { 
-__p+='\r\n\t\t\t\t'+
-((__t=( this.renderMarket(bettypes[79].markets, 2, 'useForaTemplate') ))==null?'':__t)+
-'\r\n\t\t\t';
+__p+='\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class="span1">\r\n\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="144">\r\n\t\t\t\t\t<div class="row-fluid bettype-caption">Кільк. голів 1к 1т</div>\r\n\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t';
+ if (model.bettypes[144]) { 
+__p+='\r\n\t\t\t\t\t\t'+
+((__t=( self.renderMarket(model.bettypes[144].markets, 1) ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t';
  } else { 
-__p+='\r\n\t\t\t\t'+
-((__t=( this.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t';
+__p+='\r\n\t\t\t\t\t\t'+
+((__t=( self.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t';
  } 
-__p+='\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<div class="span2">\r\n\t<div class="container-fluid bettype-wrapper" bettype="80">\r\n\t\t<div class="row-fluid bettype-caption">Тотул</div>\r\n\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t';
- if (bettypes[80]) { 
-__p+='\r\n\t\t\t\t\t'+
-((__t=( this.renderMarket(bettypes[80].markets, 2, 'useForaTemplate') ))==null?'':__t)+
-'\r\n\t\t\t\t';
+__p+='\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class="span1">\r\n\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="145">\r\n\t\t\t\t\t<div class="row-fluid bettype-caption">Кільк. голів 2к 1т</div>\r\n\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t';
+ if (model.bettypes[145]) { 
+__p+='\r\n\t\t\t\t\t\t'+
+((__t=( self.renderMarket(model.bettypes[145].markets, 1) ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t';
  } else { 
-__p+='\r\n\t\t\t\t\t'+
-((__t=( this.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t\t';
+__p+='\r\n\t\t\t\t\t\t'+
+((__t=( self.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t';
  } 
-__p+='\r\n\t\t\t</div>\r\n\t</div>\r\n</div>\r\n<div class="span2">\r\n\t<div class="container-fluid bettype-wrapper" bettype="9">\r\n\t\t<div class="row-fluid bettype-caption">Рахунок матчу з 5</div>\r\n\t\t<div class="container-fluid markets">\r\n\t\t\t';
- if (bettypes[9]) { 
-__p+='\r\n\t\t\t\t'+
-((__t=( this.renderMarket(bettypes[9].markets, 2) ))==null?'':__t)+
-'\r\n\t\t\t';
+__p+='\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t\t<div class="span5">\r\n\t\t\t\t<div class="container-fluid bettype-wrapper" bettype="145">\r\n\t\t\t\t\t<div class="row-fluid bettype-caption">Точний рахунок 1-го тайму</div>\r\n\t\t\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t\t\t';
+ if (model.bettypes[112]) { 
+__p+='\r\n\t\t\t\t\t\t'+
+((__t=( self.renderMarket(model.bettypes[112].markets, 3) ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t';
  } else { 
-__p+='\r\n\t\t\t\t'+
-((__t=( this.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t';
+__p+='\r\n\t\t\t\t\t\t'+
+((__t=( self.renderEmptyMarket() ))==null?'':__t)+
+'\r\n\t\t\t\t\t\t';
  } 
-__p+='\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<div class="span2">\r\n\t<div class="row-fluid">\r\n\t\t<div class="container-fluid bettype-wrapper" bettype="80">\r\n\t\t\t<div class="row-fluid bettype-caption">Рахунок матчу з 3</div>\r\n\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t';
- if (bettypes[8]) { 
-__p+='\r\n\t\t\t\t\t'+
-((__t=( this.renderMarket(bettypes[8].markets, 2) ))==null?'':__t)+
-'\r\n\t\t\t\t';
- } else { 
-__p+='\r\n\t\t\t\t\t'+
-((__t=( this.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t\t';
+__p+='\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t';
  } 
-__p+='\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class="row-fluid">\r\n\t\t<div class="container-fluid bettype-wrapper" bettype="121">\r\n\t\t\t<div class="row-fluid bettype-caption">Тотул пар/непар</div>\r\n\t\t\t<div class="container-fluid markets">\r\n\t\t\t\t';
- if (bettypes[121]) { 
-__p+='\r\n\t\t\t\t\t'+
-((__t=( this.renderMarket(bettypes[121].markets, 2) ))==null?'':__t)+
-'\r\n\t\t\t\t';
- } else { 
-__p+='\r\n\t\t\t\t'+
-((__t=( this.renderEmptyMarket() ))==null?'':__t)+
-'\r\n\t\t\t\t';
- } 
-__p+='\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n</div>\r\n\t'+
-((__t=( this.renderSetBets(bettypes, event.status) ))==null?'':__t)+
-'\r\n</div>\r\n';
+__p+='\r\n</div>\r\n';
 }
 return __p;
 };
 
 	return App.PreTemplates;
 });
+
 

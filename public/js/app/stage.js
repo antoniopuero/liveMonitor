@@ -131,7 +131,7 @@ define(function () {
 				home.name += ", " + self.getCompetiotorName(event.competitors.second_home.code);
 				away.name += ", " + self.getCompetiotorName(event.competitors.second_away.code);
 			}
-			event.status = self.getStatusFromDictionary(event.status_code);
+			event.display_status = self.getStatusFromDictionary(event.status_code);
 			event.starttime = self.startTime(event.start_time);
 			event.time_to_start = self.timeToStart(event.start_time);
 
@@ -244,10 +244,6 @@ define(function () {
 			return LiveAPI.getFromDictionary(code, 'match_status');
 		},
 
-		getCategoryName: function (code) {
-			return LiveAPI.getFromDictionary(code, 'category');
-		},
-
 		getCompetiotorName: function (code) {
 			return LiveAPI.getFromDictionary(code, 'team');
 		},
@@ -328,7 +324,7 @@ define(function () {
 					eventModel.collection.remove(eventModel.get('event_num'));
 				}, 5 * 60 * 1000);
 			}
-			event.status = LiveAPI.getStatusFromDictionary(updatedEvent.status_code);
+			event.display_status = LiveAPI.getStatusFromDictionary(updatedEvent.status_code);
 			eventModel.set({event: event});
 		},
 		updateEventStat: function (eventModel,updatedEventStat) {

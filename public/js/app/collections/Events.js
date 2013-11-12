@@ -7,10 +7,8 @@
  */
 define(['models/Event'], function (Event) {
 	var Events = Backbone.Collection.extend({
-		model: Event,
-		initialize: function () {
-		},
-		comparator: function (model) {
+		model: Event, //SET MODEL OF COLLECTION WHICH IS DEFINED IN MODELS/EVENT.JS
+		comparator: function (model) { //COMPARATOR FOR PRESORTING OF EVENTS BY START TIME
 			return parseInt(model.get('event').start_time);
 		}
 	});

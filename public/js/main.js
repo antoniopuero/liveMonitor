@@ -5,6 +5,10 @@
  * Time: 11:12
  * To change this template use File | Settings | File Templates.
  */
+/**
+ * all requirements and dependencies are described here
+ */
+
 require.config({
 	paths: {
 		/* COMPONENTS */
@@ -60,18 +64,14 @@ require.config({
 
 });
 require(['app', 'backbone', 'cometController'], function (AppView, Backbone, transport) {
-
-	Backbone.Model.prototype._super = function(funcName){
-		return this.constructor.prototype[funcName].apply(this, _.rest(arguments));
-	}
+	//CONDITIONAL OBJECT FOR ALL PARTS OF APPLICATION
 	window.App = _.extend((window.App || {}), {
-		Vent: _.extend({}, Backbone.Events),
-		cond: {
-			eventCollection: {}
+		Vent: _.extend({}, Backbone.Events), // EVENT AGREGATOR
+		cond: { //ALL INFORMATION STORE IN THIS OBJECT AND BACKBONE COLLECTIONS AND MODELS ARE HERE TOO
+			eventCollection: {} //THIS ONE WILL CONTAINS FOOTBALL AND TENNIS COLLECTIONS OF EVENTS
 		},
-		templates: {},
-		afterInit: false
+		afterInit: false //FOR SOME REASON UPDATES CAN BECAME BEFORE INITIAL BETTYPES AND THIS FLAG IS SET TO TRUE WHEN FIRST RENDER WILL FIRE
 	});
-	new AppView();
-	transport.init();
+	new AppView(); //INITIALIZE MAIN INSTRUCTION FOR LIVE APPLICATION TO RUN
+	transport.init(); //THIS ONE START COMET AGREGATING AND SUBSCRIBES TO LIVE CHANNEL
 });

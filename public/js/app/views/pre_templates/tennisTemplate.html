@@ -1,5 +1,5 @@
 <div class="row-fluid break-line"></div>
-<div class="container-fluid <%= event.betstatus %>">
+<div class="container-fluid">
 <div class="row-fluid tennis-main-bets">
 <div class="span2 event-information">
 	<div class="row-fluid event-hat">
@@ -7,109 +7,182 @@
 		<div class="span6 event-status"><%= event.starttime %></div>
 	</div>
 	<div class="row-fluid competitors text-center"> <%= event.competitors.home.name %> - <%= event.competitors.away.name %> </div>
-	<div class="row-fluid status text-center"><%= event.status %></div>
-	<div class="row-fluid setscore text-center"><%= this.renderScore(event_stat, event.status_code) %></div>
+	<div class="row-fluid status text-center"><%= event.display_status %></div>
+	<div class="row-fluid setscore text-center"><%= this.renderScore(event_stat, event.status, event.time_to_start) %></div>
 </div>
-<div class="span2 offset2">
+<div class="span2 height-template">
 	<div class="row-fluid">
-		<div class="container-fluid bettype-wrapper" bettype="2">
-			<div class="row-fluid bettype-caption">Основні підсумки</div>
+		<div class="container-fluid bettype-wrapper">
 			<div class="container-fluid markets">
-				<% if (bettypes[2]) { %>
-					<%= this.renderMarket(bettypes[2].markets, 2) %>
-				<% } else { %>
-					<%= this.renderEmptyMarket() %>
-				<% } %>
+				<div class="row-fluid market-wrapper empty">
+					<div class="span12 bet">
+						<div class="container-fluid">
+							<div class="row-fluid  outcome">empty</div>
+							<div class="row-fluid odd">
+								<div class="span4 castcode">1</div>
+								<div class="span8 coef">0</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row-fluid market-wrapper empty">
+					<div class="span12 bet">
+						<div class="container-fluid">
+							<div class="row-fluid  outcome">empty</div>
+							<div class="row-fluid odd">
+								<div class="span4 castcode">1</div>
+								<div class="span8 coef">0</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row-fluid market-wrapper empty">
+					<div class="span12 bet">
+						<div class="container-fluid">
+							<div class="row-fluid  outcome">empty</div>
+							<div class="row-fluid odd">
+								<div class="span4 castcode">1</div>
+								<div class="span8 coef">0</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row-fluid market-wrapper empty">
+					<div class="span12 bet">
+						<div class="container-fluid">
+							<div class="row-fluid  outcome">empty</div>
+							<div class="row-fluid odd">
+								<div class="span4 castcode">1</div>
+								<div class="span8 coef">0</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row-fluid market-wrapper empty">
+					<div class="span12 bet">
+						<div class="container-fluid">
+							<div class="row-fluid  outcome">empty</div>
+							<div class="row-fluid odd">
+								<div class="span4 castcode">1</div>
+								<div class="span8 coef">0</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="row-fluid">
-		<div class="container-fluid bettype-wrapper" bettype="122">
-			<div class="row-fluid bettype-caption">Кільк. сетів з 3</div>
-			<div class="container-fluid markets">
-				<% if (bettypes[122]) { %>
-					<%= this.renderMarket(bettypes[122].markets, 2) %>
-				<% } else { %>
-					<%= this.renderEmptyMarket() %>
-				<% } %>
+</div>
+<% if (event.status == "not_started") { %>
+	<%= this.renderStoppedLayer('empty') %>
+<% } else { %>
+	<% if (event.betstatus  == "stopped") { %>
+		<%= this.renderStoppedLayer() %>
+	<% } else { %>
+		<div class="span2">
+			<div class="row-fluid">
+				<div class="container-fluid bettype-wrapper" bettype="2">
+					<div class="row-fluid bettype-caption">Основні підсумки</div>
+					<div class="container-fluid markets">
+						<% if (bettypes[2]) { %>
+						<%= this.renderMarket(bettypes[2].markets, 2) %>
+						<% } else { %>
+						<%= this.renderEmptyMarket() %>
+						<% } %>
+					</div>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="container-fluid bettype-wrapper" bettype="122">
+					<div class="row-fluid bettype-caption">Кільк. сетів з 3</div>
+					<div class="container-fluid markets">
+						<% if (bettypes[122]) { %>
+						<%= this.renderMarket(bettypes[122].markets, 2) %>
+						<% } else { %>
+						<%= this.renderEmptyMarket() %>
+						<% } %>
+					</div>
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="container-fluid bettype-wrapper" bettype="128">
+					<div class="row-fluid bettype-caption">Кільк. сетів з 5</div>
+					<div class="container-fluid markets">
+						<% if (bettypes[128]) { %>
+						<%= this.renderMarket(bettypes[128].markets, 3) %>
+						<% } else { %>
+						<%= this.renderEmptyMarket() %>
+						<% } %>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="row-fluid">
-		<div class="container-fluid bettype-wrapper" bettype="128">
-			<div class="row-fluid bettype-caption">Кільк. сетів з 5</div>
-			<div class="container-fluid markets">
-				<% if (bettypes[128]) { %>
-					<%= this.renderMarket(bettypes[128].markets, 3) %>
-				<% } else { %>
+		<div class="span2">
+			<div class="container-fluid bettype-wrapper" bettype="79">
+				<div class="row-fluid bettype-caption">Фора</div>
+				<div class="container-fluid markets">
+					<% if (bettypes[79]) { %>
+					<%= this.renderMarket(bettypes[79].markets, 2, 'useForaTemplate') %>
+					<% } else { %>
 					<%= this.renderEmptyMarket() %>
-				<% } %>
+					<% } %>
+				</div>
 			</div>
 		</div>
-	</div>
-</div>
-<div class="span2">
-	<div class="container-fluid bettype-wrapper" bettype="79">
-		<div class="row-fluid bettype-caption">Фора</div>
-		<div class="container-fluid markets">
-			<% if (bettypes[79]) { %>
-				<%= this.renderMarket(bettypes[79].markets, 2, 'useForaTemplate') %>
-			<% } else { %>
-				<%= this.renderEmptyMarket() %>
-			<% } %>
-		</div>
-	</div>
-</div>
-<div class="span2">
-	<div class="container-fluid bettype-wrapper" bettype="80">
-		<div class="row-fluid bettype-caption">Тотул</div>
-			<div class="container-fluid markets">
-				<% if (bettypes[80]) { %>
+		<div class="span2">
+			<div class="container-fluid bettype-wrapper" bettype="80">
+				<div class="row-fluid bettype-caption">Тотул</div>
+				<div class="container-fluid markets">
+					<% if (bettypes[80]) { %>
 					<%= this.renderMarket(bettypes[80].markets, 2, 'useForaTemplate') %>
-				<% } else { %>
+					<% } else { %>
 					<%= this.renderEmptyMarket() %>
-				<% } %>
+					<% } %>
+				</div>
 			</div>
-	</div>
-</div>
-<div class="span2">
-	<div class="container-fluid bettype-wrapper" bettype="9">
-		<div class="row-fluid bettype-caption">Рахунок матчу з 5</div>
-		<div class="container-fluid markets">
-			<% if (bettypes[9]) { %>
-				<%= this.renderMarket(bettypes[9].markets, 2) %>
-			<% } else { %>
-				<%= this.renderEmptyMarket() %>
-			<% } %>
 		</div>
-	</div>
-</div>
-<div class="span2">
-	<div class="row-fluid">
-		<div class="container-fluid bettype-wrapper" bettype="80">
-			<div class="row-fluid bettype-caption">Рахунок матчу з 3</div>
-			<div class="container-fluid markets">
-				<% if (bettypes[8]) { %>
+		<div class="span2">
+			<div class="container-fluid bettype-wrapper" bettype="9">
+				<div class="row-fluid bettype-caption">Рахунок матчу з 5</div>
+				<div class="container-fluid markets">
+					<% if (bettypes[9]) { %>
+					<%= this.renderMarket(bettypes[9].markets, 2) %>
+					<% } else { %>
+					<%= this.renderEmptyMarket() %>
+					<% } %>
+				</div>
+			</div>
+		</div>
+		<div class="span2">
+		<div class="row-fluid">
+			<div class="container-fluid bettype-wrapper" bettype="80">
+				<div class="row-fluid bettype-caption">Рахунок матчу з 3</div>
+				<div class="container-fluid markets">
+					<% if (bettypes[8]) { %>
 					<%= this.renderMarket(bettypes[8].markets, 2) %>
-				<% } else { %>
+					<% } else { %>
 					<%= this.renderEmptyMarket() %>
-				<% } %>
+					<% } %>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="row-fluid">
-		<div class="container-fluid bettype-wrapper" bettype="121">
-			<div class="row-fluid bettype-caption">Тотул пар/непар</div>
-			<div class="container-fluid markets">
-				<% if (bettypes[121]) { %>
+		<div class="row-fluid">
+			<div class="container-fluid bettype-wrapper" bettype="121">
+				<div class="row-fluid bettype-caption">Тотул пар/непар</div>
+				<div class="container-fluid markets">
+					<% if (bettypes[121]) { %>
 					<%= this.renderMarket(bettypes[121].markets, 2) %>
-				<% } else { %>
-				<%= this.renderEmptyMarket() %>
-				<% } %>
+					<% } else { %>
+					<%= this.renderEmptyMarket() %>
+					<% } %>
+				</div>
 			</div>
 		</div>
 	</div>
+	<% } %>
+<% } %>
 </div>
-</div>
-	<%= this.renderSetBets(bettypes, event.status) %>
+<% if (event.status != "not_started") { %>
+	<%= this.renderSetBets(bettypes, event.status, event.betstatus) %>
+<% } %>
 </div>

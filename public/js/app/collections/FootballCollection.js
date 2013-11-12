@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 define(['models/FootballEvent', 'collections/Events'], function (FootballEvent, Events) {
-	var FootballCollection = Events.extend({
+	var FootballCollection = Events.extend({ //ALSO FOR FUTURE FUNCTIONALITY
 		model: FootballEvent
 	});
 	return FootballCollection;

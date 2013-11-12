@@ -7,9 +7,7 @@
  */
 define(['backbone'], function (Backbone) {
 	var Event = Backbone.Model.extend({
-		idAttribute: 'event_num',
-		initialize: function () {
-		}
+		idAttribute: 'event_num' //FOR SIMPLE SORTING AND ACCESS TO EVENT MODEL IN COLLECTION
 	});
 	return Event;
 });

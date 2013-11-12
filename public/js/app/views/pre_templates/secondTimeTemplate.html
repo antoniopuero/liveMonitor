@@ -35,6 +35,9 @@
 			</div>
 		</div>
 	</div>
+	<% if (model.event.betstatus  == 'stopped') { %>
+		<%= this.renderStoppedLayer('empty') %>
+	<% } else { %>
 	<div class="span10">
 		<div class="row-fluid">
 			<div class="span2andhalf ">
@@ -53,4 +56,5 @@
 			</div>
 		</div>
 	</div>
+	<% } %>
 </div>
