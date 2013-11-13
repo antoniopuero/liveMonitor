@@ -1,4 +1,31 @@
-/**
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: c:/Users/a.savchenko/Desktop/WorkingAt/live3/public/js/app/stage.js</title>
+    
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+    
+    <h1 class="page-title">Source: c:/Users/a.savchenko/Desktop/WorkingAt/live3/public/js/app/stage.js</h1>
+    
+    
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source"><code>/**
  * Created with JetBrains PhpStorm.
  * User: a.savchenko
  * Date: 15.07.13
@@ -32,7 +59,7 @@ define(function () {
 				var $this = $(this),
 					blockWidth = $this.width(),
 					textLength = $this.text().replace(/\s{2,}/g, '').length;
-				if ( (blockWidth != 0) && (blockWidth < minBlockWidth) ) {
+				if ( (blockWidth != 0) &amp;&amp; (blockWidth &lt; minBlockWidth) ) {
 					minBlockWidth = blockWidth; //get minimal width of block in group
 				}
 				if ( textLength > maxTextLength ) {
@@ -44,7 +71,7 @@ define(function () {
 			if (doubleWidth !== undefined) { //if doublewidth argument provided
 				tempCof *= 2; //coef doubled
 			}
-			if ( tempCof < minSize ) { //heck the limits
+			if ( tempCof &lt; minSize ) { //heck the limits
 				maxSize = minSize;
 			} else if ( tempCof > maxSize ) {
 				maxSize = maxSize;
@@ -110,7 +137,7 @@ define(function () {
 				tennis: []
 			};
 			_.each(condObj.event, function (event, key) { //key is event_num for all conditional object
-				if ( condObj.bettypes[key] && condObj.event_stat[key] ) { //that's why we check where we had all parts of complete event model
+				if ( condObj.bettypes[key] &amp;&amp; condObj.event_stat[key] ) { //that's why we check where we had all parts of complete event model
 					if ( event.category_code === 1 ) { //this for football collection
 						completeEvents.football.push(self.compileEvent(key, condObj.event[key], condObj.bettypes[key].data, condObj.event_stat[key])); //push compile event to collection
 					} else if ( event.category_code === 3 ) { //this one for tennis and also like with football collection
@@ -340,7 +367,7 @@ define(function () {
 		startTime: function (startTime) {
 			var start = new Date(parseInt(startTime, 10) * 1000),
 				startString = '';
-			startString += start.getDate() + '.' + (start.getMonth() + 1) + ', ' + start.getHours() + ':' + (start.getMinutes() < 10 ? '0' + start.getMinutes() : start.getMinutes());
+			startString += start.getDate() + '.' + (start.getMonth() + 1) + ', ' + start.getHours() + ':' + (start.getMinutes() &lt; 10 ? '0' + start.getMinutes() : start.getMinutes());
 			return startString;
 		},
 
@@ -355,7 +382,7 @@ define(function () {
 				now = new Date(),
 				tempTime,
 				timeToStartString = 'До початку: ';
-			if (start - now < 0) {
+			if (start - now &lt; 0) {
 				return '';
 			}
 			tempTime = start.getDate() - now.getDate();
@@ -404,7 +431,7 @@ define(function () {
 					App.cond[dataType][data.event_num] = data;
 				}
 
-				if (LiveAPI.checkFullEvent(App.cond, data, dataType) && App.afterInit) { //if some of event are already full
+				if (LiveAPI.checkFullEvent(App.cond, data, dataType) &amp;&amp; App.afterInit) { //if some of event are already full
 					sportType = sportType ? sportType : LiveAPI.availableSports[App.cond.event[data.event_num].category_code]; //get sport type from availableSports array when data portion is bettype without category_code parameter
 					App.cond.eventCollection[sportType].add(LiveAPI.compileEvent(data.event_num, App.cond.event[data.event_num], App.cond.bettypes[data.event_num], App.cond.event_stat[data.event_num])); //compile new event and add it to some sport collection
 					LiveAPI.deleteFromCondObject(App.cond, data.event_num); //delete from preconditional objects parts of compiled event model
@@ -523,3 +550,26 @@ define(function () {
 	};
 	return LiveAPI;
 });
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Index</a></h2><h3>Namespaces</h3><ul><li><a href="LiveAPI.html">LiveAPI</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addNewBettypes">addNewBettypes</a></li><li><a href="global.html#checkCompleteEvents">checkCompleteEvents</a></li><li><a href="global.html#checkFullEvent">checkFullEvent</a></li><li><a href="global.html#compileEvent">compileEvent</a></li><li><a href="global.html#convertArrayIntoObject">convertArrayIntoObject</a></li><li><a href="global.html#deleteFromCondObject">deleteFromCondObject</a></li><li><a href="global.html#getBettypeName">getBettypeName</a></li><li><a href="global.html#getFromDictionary">getFromDictionary</a></li><li><a href="global.html#getOutcomeName">getOutcomeName</a></li><li><a href="global.html#getStatusFromDictionary">getStatusFromDictionary</a></li><li><a href="global.html#resizeFonts">resizeFonts</a></li><li><a href="global.html#setColumn">setColumn</a></li><li><a href="global.html#sortBettypes">sortBettypes</a></li><li><a href="global.html#sortOdds">sortOdds</a></li><li><a href="global.html#startTime">startTime</a></li><li><a href="global.html#timeToStart">timeToStart</a></li><li><a href="global.html#updateBettypes">updateBettypes</a></li><li><a href="global.html#updateEvent">updateEvent</a></li><li><a href="global.html#updateEventStat">updateEventStat</a></li><li><a href="global.html#updateRouter">updateRouter</a></li><li><a href="global.html#useResizedFonts">useResizedFonts</a></li></ul>
+</nav>
+
+<br clear="both">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.0-alpha2</a> on Wed Nov 13 2013 14:31:39 GMT+0200 (Фінляндія (зима))
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
